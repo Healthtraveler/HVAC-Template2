@@ -1,0 +1,319 @@
+/* Reset and global styles */
+body {
+    font-family: 'Proxima Nova', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+/* Header styles */
+header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+header img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Navigation styles */
+nav {
+    display: flex;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 15px;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #3498db;
+}
+
+/* Hero section styles */
+section.hero {
+    background: url('hero-image.jpg') center/cover no-repeat;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    text-align: center;
+    box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.4);
+}
+
+/* Services section styles */
+section.services {
+    padding: 2em;
+    text-align: center;
+}
+
+section.services h2 {
+    color: #333;
+}
+
+section.services ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+section.services li {
+    flex: 0 0 calc(33.33% - 20px);
+    margin: 10px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+section.services li:hover {
+    transform: translateY(-5px);
+}
+
+/* Contact section styles */
+section.contact {
+    padding: 4em;
+    border: 2px solid #333;
+    text-align: center;
+}
+
+section.contact h2 {
+    color: #333;
+}
+
+section.contact form {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+section.contact form:hover {
+    transform: translateY(-5px);
+}
+
+/* Center the heading */
+section.contact form h2 {
+    text-align: center;
+}
+
+/* Left-align the labels */
+section.contact form label {
+    display: block;
+    margin-bottom: 15px;
+    color: #333;
+    font-weight: bold; /* Make labels bold */
+    text-align: left; /* Left-align labels */
+}
+
+section.contact form input,
+section.contact form select,
+section.contact form textarea {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+section.contact form button {
+    display: block;
+    margin: 0 auto;
+    background-color: #3498db;
+    color: #fff;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+section.contact form button:hover {
+    background-color: #2980b9;
+}
+
+/* Center-align Preferred Time label */
+section.contact form label[for="preferred-time"] {
+    text-align: center;
+    display: block;
+    margin-bottom: 15px;
+    color: #333;
+    font-weight: bold;
+}
+
+/* Modernizing time options */
+section.contact form select {
+    font-family: 'Proxima Nova', Arial, sans-serif;
+    font-size: 120%;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+/* Appointment section styles */
+section.appointment {
+    padding: 4em;
+    border: 2px solid #333;
+    text-align: center;
+}
+
+section.appointment h2 {
+    color: #333;
+}
+
+section.appointment form {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+section.appointment form label {
+    display: block;
+    margin-bottom: 15px;
+}
+
+section.appointment form input,
+section.appointment form select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+section.appointment form button {
+    display: block;
+    margin: 0 auto;
+    background-color: #333;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* Calendar styles */
+.calendar-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.calendar {
+    width: 100%;
+    box-sizing: border-box;
+    max-width: 600px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+    background: linear-gradient(to bottom, #f5f5f5, #e0e0e0);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(to bottom, #333, #222);
+    color: #fff;
+    padding: 10px;
+    border-bottom: 1px solid #555;
+}
+
+.calendar-header button {
+    background: linear-gradient(to bottom, #333, #222);
+    color: #fff;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.calendar-header h3 {
+    margin: 0;
+    font-size: 20px;
+}
+
+.calendar-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.calendar-table th,
+.calendar-table td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+    transition: background 0.3s;
+    font-family: 'Proxima Nova', Arial, sans-serif; /* Apply Proxima Nova font to all text */
+}
+
+.calendar-table th {
+    background: linear-gradient(to bottom, #333, #222);
+    color: #fff;
+}
+
+.calendar-table td {
+    cursor: pointer;
+}
+
+.calendar-table td:hover {
+    background: #ddd;
+}
+
+.calendar-table td.booked {
+    background-color: #5e5e5e;
+    cursor: not-allowed;
+}
+
+.calendar-table td.selected {
+    background-color: #3498db;
+    color: #fff;
+    font-weight: bold;
+}
+
+/* Modernizing time options */
+.calendar-table select {
+    font-family: 'Proxima Nova', Arial, sans-serif; /* Apply Proxima Nova font to select */
+    font-size: 120%; /* Increase font size by 20% */
+}
+
+/* Footer styles */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1em;
+}
+
+footer p {
+    margin: 0;
+}
+
+footer strong {
+    color: #fff;
+    display: block;
+}

@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HVAC Gallery</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Proxima+Nova:wght@400;700&display=swap">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
     <style>
         body {
             font-family: 'Proxima Nova', Arial, sans-serif;
@@ -42,14 +44,30 @@
             color: #333;
         }
 
-        section.gallery .image-container {
+        .carousel-container {
+            width: 80%;
+            margin: 20px auto;
+        }
+
+        .carousel {
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .carousel img {
+            width: 100%;
+            height: auto;
+        }
+
+        .image-container {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
             margin-top: 20px;
         }
 
-        section.gallery .image {
+        .image {
             width: 300px;
             margin: 10px;
             overflow: hidden;
@@ -57,13 +75,13 @@
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
 
-        section.gallery .image img {
+        .image img {
             width: 100%;
             height: auto;
             border-bottom: 2px solid #fff;
         }
 
-        section.gallery .image p {
+        .image p {
             padding: 10px;
             margin: 0;
             background-color: #333;
@@ -86,24 +104,36 @@
 
     <nav>
         <a href="index.html">Home</a>
-        <a href="#Gallery.html">Gallery</a>
-        <a href="#FAQ.html">FAQ</a>
+        <a href="Gallery.html">Gallery</a>
+        <a href="FAQ.html">FAQ</a>
     </nav>
 
     <section class="gallery">
         <h2>Explore Our Work</h2>
+
+        <!-- Slick Carousel Container -->
+        <div class="carousel-container">
+            <div class="carousel">
+                <img src="placeholder1.jpg" alt="Gallery Image 1">
+                <img src="placeholder2.jpg" alt="Gallery Image 2">
+                <img src="placeholder3.jpg" alt="Gallery Image 3">
+                <!-- Add more carousel images as needed -->
+            </div>
+        </div>
+
+        <!-- Gallery Section -->
         <div class="image-container">
             <div class="image">
-                <img src="placeholder1.jpg" alt="Gallery Image 1">
-                <p>Caption 1</p>
+                <img src="placeholder4.jpg" alt="Gallery Image 4">
+                <p>Caption 4</p>
             </div>
             <div class="image">
-                <img src="placeholder2.jpg" alt="Gallery Image 2">
-                <p>Caption 2</p>
+                <img src="placeholder5.jpg" alt="Gallery Image 5">
+                <p>Caption 5</p>
             </div>
             <div class="image">
-                <img src="placeholder3.jpg" alt="Gallery Image 3">
-                <p>Caption 3</p>
+                <img src="placeholder6.jpg" alt="Gallery Image 6">
+                <p>Caption 6</p>
             </div>
             <!-- Add more images as needed -->
         </div>
@@ -113,5 +143,23 @@
         <p>Contact us at <strong>info@hvacservices.com</strong> or call <strong>(555) 123-4567</strong></p>
     </footer>
 
+    <!-- Include Slick Carousel JS -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+    <script>
+        // Initialize Slick Carousel
+        $(document).ready(function(){
+            $('.carousel').slick({
+                autoplay: true,
+                autoplaySpeed: 3000,
+                dots: true,
+                infinite: true,
+                speed: 500,
+                fade: true,
+                cssEase: 'linear'
+            });
+        });
+    </script>
 </body>
 </html>

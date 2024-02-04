@@ -2,259 +2,14 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Your HVAC Services Description">
+<meta name="keywords" content="HVAC, Heating, Cooling, Plumbing, Ventilation, Air Quality">
+<meta name="author" content="Your Name">
     <title>HVAC Services</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Proxima+Nova:wght@400;700&display=swap">
-    <style>
-        body {
-            font-family: 'Proxima Nova', Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-        }
-
-        header {
-            background-color: #333;
-            color: #fff;
-            text-align: center;
-            padding: 1em;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        header img {
-            max-width: 100%;
-            height: auto;
-        }
-
-        nav {
-            display: flex;
-        }
-
-        nav a {
-            color: #fff;
-            text-decoration: none;
-            margin: 0 15px;
-        }
-
-        section.hero {
-            background: url('hero-image.jpg') center/cover no-repeat;
-            height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #fff;
-            text-align: center;
-        }
-
-        section.services {
-            padding: 2em;
-            text-align: center; /* Centering the content */
-        }
-
-        section.services h2 {
-            color: #333;
-        }
-
-        section.services ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center; /* Centering the list */
-        }
-
-        section.services li {
-            flex: 0 0 calc(33.33% - 20px);
-            margin: 10px;
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-
-        section.contact {
-            padding: 4em;
-            border: 2px solid #333;
-            text-align: center; /* Centering the content */
-        }
-
-        section.contact h2 {
-            color: #333;
-        }
-
-        section.contact form {
-            max-width: 600px;
-            margin: 0 auto;
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-
-        section.contact form label {
-            display: block;
-            margin-bottom: 15px;
-        }
-
-        section.contact form textarea {
-            width: 100%;
-            padding: 10px;
-            margin-bottom: 15px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            box-sizing: border-box;
-            resize: none; /* Fixed size, not resizable by users */
-        }
-
-        section.contact form button {
-            display: block;
-            margin: 0 auto; /* Centering the button */
-            background-color: #333;
-            color: #fff;
-            padding: 10px 15px;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-        }
-
-        section.appointment {
-            padding: 4em;
-            border: 2px solid #333;
-            text-align: center; /* Centering the content */
-        }
-
-        section.appointment h2 {
-            color: #333;
-        }
-
-        section.appointment form {
-            max-width: 600px;
-            margin: 0 auto;
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-
-        section.appointment form label {
-            display: block;
-            margin-bottom: 15px;
-        }
-
-        section.appointment form input,
-        section.appointment form select {
-            width: 100%;
-            padding: 10px;
-            margin-bottom: 15px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            box-sizing: border-box;
-        }
-
-        section.appointment form button {
-            display: block;
-            margin: 0 auto; /* Centering the button */
-            background-color: #333;
-            color: #fff;
-            padding: 10px 15px;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-        }
-
-        .calendar-container {
-            display: flex;
-            justify-content: center;
-            margin-top: 20px;
-        }
-@media only screen and (max-width: 600px) {
-            .calendar {
-                width: 100%;
-                box-sizing: border-box;
-            }
-        .calendar {
-            width: 80%;
-            max-width: 600px;
-            border: 1px solid #ccc;
-            border-radius: 8px;
-            overflow: hidden;
-            background: linear-gradient(to bottom, #f5f5f5, #e0e0e0);
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-
-        .calendar-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            background: linear-gradient(to bottom, #333, #222);
-            color: #fff;
-            padding: 10px;
-            border-bottom: 1px solid #555;
-        }
-
-        .calendar-header button {
-            background: linear-gradient(to bottom, #333, #222);
-            color: #fff;
-            border: none;
-            font-size: 16px;
-            cursor: pointer;
-        }
-
-        .calendar-header h3 {
-            margin: 0;
-            font-size: 20px;
-        }
-
-        .calendar-table {
-            width: 100%;
-            border-collapse: collapse;
-        }
-
-        .calendar-table th,
-        .calendar-table td {
-            border: 1px solid #ccc;
-            padding: 10px;
-            text-align: center;
-            transition: background 0.3s;
-        }
-
-        .calendar-table th {
-            background: linear-gradient(to bottom, #333, #222);
-            color: #fff;
-        }
-
-        .calendar-table td {
-            cursor: pointer;
-        }
-
-        .calendar-table td:hover {
-            background: #ddd;
-        }
-
-        .calendar-table td.booked {
-            background-color: #ffcccc;
-            cursor: not-allowed;
-        }
-
-       footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 1em;
-}
-
-footer p {
-    margin: 0; /* Remove default margin */
-}
-
-footer strong {
-    color: #fff;
-    display: block; /* Ensure each strong element is on a new line */
-}
-    </style>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
 </head>
 <body>
 
@@ -285,7 +40,7 @@ footer strong {
 
     <section class="contact">
         <h2>Contact Us & Book an Appointment</h2>
-        <form action="/submit_form" method="post">
+        <form action="submit_form.php" method="post">
             <label for="name">Name:</label>
             <input type="text" id="name" name="name" required>
 
@@ -303,9 +58,9 @@ footer strong {
             <div class="calendar-container">
                 <div class="calendar" id="calendar"></div>
             </div>
-
-            <label for="appointmentTime">Preferred Time:</label>
-            <select id="appointmentTime" name="appointmentTime" required>
+            <input type="hidden" id="selectedDate" name="selectedDate">
+            <label for="preferred-time">Preferred Time:</label>
+            <select id="preferred-time" name="preferred-time"> required>
                 <option value="07:00 AM">07:00 AM</option>
                 <option value="08:00 AM">08:00 AM</option>
                 <option value="09:00 AM">09:00 AM</option>
@@ -328,120 +83,9 @@ footer strong {
     <p>Contact us at <strong>info@hvacservices.com</strong> or call <strong>(555) 123-4567</strong></p>
 </footer>
 
-<script>
-        // Lazy load images
-        document.addEventListener('DOMContentLoaded', function() {
-            const lazyImages = document.querySelectorAll('img.lazy');
-            const lazyObserver = new IntersectionObserver(function(entries) {
-                entries.forEach(function(entry) {
-                    if (entry.isIntersecting) {
-                        const lazyImage = entry.target;
-                        lazyImage.src = lazyImage.dataset.src;
-                        lazyImage.classList.remove('lazy');
-                        lazyObserver.unobserve(lazyImage);
-                    }
-                });
-            });
-
-            lazyImages.forEach(function(lazyImage) {
-                lazyObserver.observe(lazyImage);
-            });
-        });
-    </script>
-    <script>
-        // Calendar generation and interaction logic
-        const calendarContainer = document.getElementById('calendar');
-
-        function generateCalendar(year, month, bookedDates) {
-            const firstDay = new Date(year, month, 1);
-            const lastDay = new Date(year, month + 1, 0);
-            const daysInMonth = lastDay.getDate();
-
-            const calendar = `
-                <div class="calendar-header">
-                    <button onclick="prevMonth()">←</button>
-                    <h3>${new Date(year, month).toLocaleString('default', { month: 'long', year: 'numeric' })}</h3>
-                    <button onclick="nextMonth()">→</button>
-                </div>
-                <table class="calendar-table">
-                    <thead>
-                        <tr>
-                            <th>Sun</th>
-                            <th>Mon</th>
-                            <th>Tue</th>
-                            <th>Wed</th>
-                            <th>Thu</th>
-                            <th>Fri</th>
-                            <th>Sat</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        ${generateCalendarBody(firstDay.getDay(), daysInMonth, bookedDates)}
-                    </tbody>
-                </table>
-            `;
-
-            calendarContainer.innerHTML = calendar;
-        }
-
-        function generateCalendarBody(startDay, daysInMonth, bookedDates) {
-            let calendarBody = '';
-            let dayCounter = 1;
-
-            for (let i = 0; i < 6; i++) {
-                let row = '<tr>';
-
-                for (let j = 0; j < 7; j++) {
-                    if ((i === 0 && j < startDay) || dayCounter > daysInMonth) {
-                        row += '<td></td>';
-                    } else {
-                        const date = new Date();
-                        date.setHours(0, 0, 0, 0);
-                        date.setDate(dayCounter);
-
-                        if (date >= new Date() && !bookedDates.includes(date.toISOString().split('T')[0])) {
-                            row += `<td onclick="selectDate('${date.toISOString().split('T')[0]}')">${dayCounter}</td>`;
-                        } else {
-                            row += '<td class="booked" onclick="notAvailable()">Booked</td>';
-                        }
-
-                        dayCounter++;
-                    }
-                }
-
-                row += '</tr>';
-                calendarBody += row;
-            }
-
-            return calendarBody;
-        }
-
-        function prevMonth() {
-            const currentDate = new Date();
-            currentDate.setMonth(currentDate.getMonth() - 1);
-            generateCalendar(currentDate.getFullYear(), currentDate.getMonth(), []);
-        }
-
-        function nextMonth() {
-            const currentDate = new Date();
-            currentDate.setMonth(currentDate.getMonth() + 1);
-            generateCalendar(currentDate.getFullYear(), currentDate.getMonth(), []);
-        }
-
-        function selectDate(date) {
-            // You can implement logic to handle selected dates
-            console.log(`Selected date: ${date}`);
-        }
-
-        function notAvailable() {
-            // You can display a message indicating the date is not available
-            alert('This date is not available for booking.');
-        }
-
-        // Initial calendar generation
-        const currentDate = new Date();
-        generateCalendar(currentDate.getFullYear(), currentDate.getMonth(), []);
-    </script>
-
+    <script src="lazyload.js"></script>
+    <script src="calendar.js"></script> <!-- Calendar Script -->
+    <script src="time.js"></script>
+    
 </body>
 </html>
