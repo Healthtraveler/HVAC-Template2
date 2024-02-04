@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HVAC Gallery</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Proxima+Nova:wght@400;700&display=swap">
+    <style>
+        body {
+            font-family: 'Proxima Nova', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1em;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #666;
+            padding: 0.5em;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+        }
+
+        section.gallery {
+            padding: 2em;
+            text-align: center;
+        }
+
+        section.gallery h2 {
+            color: #333;
+        }
+
+        section.gallery .image-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        section.gallery .image {
+            width: 300px;
+            margin: 10px;
+            overflow: hidden;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        section.gallery .image img {
+            width: 100%;
+            height: auto;
+            border-bottom: 2px solid #fff;
+        }
+
+        section.gallery .image p {
+            padding: 10px;
+            margin: 0;
+            background-color: #333;
+            color: #fff;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1em;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>HVAC Gallery</h1>
+    </header>
+
+    <nav>
+        <a href="theme.html">Home</a>
+        <a href="#Gallery.html">Gallery</a>
+        <a href="#FAQ.html">FAQ</a>
+    </nav>
+
+    <section class="gallery">
+        <h2>Explore Our Work</h2>
+        <div class="image-container">
+            <div class="image">
+                <img src="placeholder1.jpg" alt="Gallery Image 1">
+                <p>Caption 1</p>
+            </div>
+            <div class="image">
+                <img src="placeholder2.jpg" alt="Gallery Image 2">
+                <p>Caption 2</p>
+            </div>
+            <div class="image">
+                <img src="placeholder3.jpg" alt="Gallery Image 3">
+                <p>Caption 3</p>
+            </div>
+            <!-- Add more images as needed -->
+        </div>
+    </section>
+
+    <footer>
+        <p>Contact us at <strong>info@hvacservices.com</strong> or call <strong>(555) 123-4567</strong></p>
+    </footer>
+
+</body>
+</html>
