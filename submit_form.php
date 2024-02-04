@@ -9,7 +9,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $appointmentTime = $_POST["appointmentTime"];
 
     // Email configuration (update with your own details)
-    $to = "thehealthtraveler@gmail.com"; // Specify your email address here
+    $to = "erikshvac@gmail.com"; // Specify your email address here
     $subject = "New Appointment Booking";
     $headers = "From: $email";
 

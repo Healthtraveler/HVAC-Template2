@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Your HVAC Services Description">
+<meta name="description" content="EPA Certified service man that provides general maintenace of HVAC services including repair; as well as residential handyman services.">
 <meta name="keywords" content="HVAC, Heating, Cooling, Plumbing, Ventilation, Air Quality">
-<meta name="author" content="Your Name">
-    <title>HVAC Services</title>
+<meta name="author" content="Erik Pulido">
+    <title>Erik's HVAC & Maintenance</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Proxima+Nova:wght@400;700&display=swap">
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
@@ -14,7 +14,7 @@
 <body>
 
     <header>
-        <img src="logo.png" alt="Company Logo">
+        <img src="EriksHVAC.png" alt="Erik's HVAC & Maintenance">
         <nav>
             <a href="index.html">Home</a>
             <a href="Gallery.html">Gallery</a>
@@ -23,7 +23,7 @@
     </header>
 
     <section class="hero">
-        <h1>Welcome to HVAC Services</h1>
+        <h1>General maintenance for $125 & free consultations. EPA Certified and quality gauranteed</h1>
     </section>
 
     <section class="services">
@@ -39,8 +39,8 @@
     </section>
 
     <section class="contact">
-        <h2>Contact Us & Book an Appointment</h2>
-        <form action="submit_form.php" method="post">
+        <h2>Contact Us</h2>
+        <form action="https://formspree.io/f/xzbnegly" method="post">
             <label for="name">Name:</label>
             <input type="text" id="name" name="name" required>
 
@@ -53,7 +53,7 @@
             <label for="message">Message:</label>
             <textarea id="message" name="message" rows="4" required></textarea>
 
-            <h3>Book an Appointment</h3>
+            <h3>Your Availability</h3>
 
             <div class="calendar-container">
                 <div class="calendar" id="calendar"></div>
@@ -77,15 +77,21 @@
 
             <button type="submit">Submit</button>
         </form>
+         <!-- Thank you message (initially hidden) -->
+         <div id="thankYouMessage" style="display: none;">
+            <p>Thank you for your submission! We will respond and book an appointment as soon as possible!</p>
+        </div>
+    </div>
     </section>
 
    <footer>
-    <p>Contact us at <strong>info@hvacservices.com</strong> or call <strong>(555) 123-4567</strong></p>
+    <p>Contact us at <strong>erikshvac@gmail.com</strong> or call <strong>(555) 123-4567</strong></p>
 </footer>
 
     <script src="lazyload.js"></script>
     <script src="calendar.js"></script> <!-- Calendar Script -->
     <script src="time.js"></script>
+    <script src="your-form-validation-script.js"></script>
     
 </body>
 </html>
