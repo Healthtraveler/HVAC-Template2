@@ -472,6 +472,9 @@ footer strong {
         justify-content: space-around;
     }
 
+    section.contact, section.services {
+    padding: 4em;
+}
     .calendar-container, section.contact, section.appointment, section.services, footer {
         padding: 0;
         margin: 0;
