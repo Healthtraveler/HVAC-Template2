@@ -167,7 +167,7 @@
     <script src="time.js"></script>
     <script src="your-form-validation-script.js"></script>
    <script>
-    document.addEventListener('DOMContentLoaded', function () {
+   document.addEventListener('DOMContentLoaded', function () {
     const serviceBoxes = document.querySelectorAll('.service-box');
 
     serviceBoxes.forEach(function (box) {
@@ -175,32 +175,25 @@
             // Toggle the expanded class on the clicked service box
             box.classList.toggle('expanded');
 
+            // Toggle the visibility of the service info within the clicked box
+            const serviceInfo = box.querySelector('.service-info');
+            if (serviceInfo.style.display === 'block') {
+                serviceInfo.style.display = 'none';
+            } else {
+                serviceInfo.style.display = 'block';
+            }
+
             // Collapse other service boxes
             serviceBoxes.forEach(function (otherBox) {
                 if (otherBox !== box && otherBox.classList.contains('expanded')) {
                     otherBox.classList.remove('expanded');
+                    otherBox.querySelector('.service-info').style.display = 'none';
                 }
             });
         });
     });
 });
-       <script>
-    <script>
-       // JavaScript code for handling the collapsible menu
-const menuIcon = document.getElementById('menuIcon');
-const menuItems = document.getElementById('menuItems');
-
-menuIcon.addEventListener('click', () => {
-    menuItems.classList.toggle('show-menu');
-});
-
-// Close the menu when the window is resized (for better user experience)
-window.addEventListener('resize', () => {
-    if (window.innerWidth > 768) {
-        menuItems.classList.remove('show-menu');
-    }
-});
-    </script>    
+       <script> 
     
 </body>
 </html>
