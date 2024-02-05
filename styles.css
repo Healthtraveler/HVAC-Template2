@@ -21,6 +21,7 @@ header {
 header img {
     max-width: 100%;
     height: auto;
+    max-height: 300px; /* Adjust the value as needed */
 }
 
 /* Navigation styles */

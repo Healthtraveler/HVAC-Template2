@@ -87,10 +87,16 @@ function onDateSelected(cell, date) {
     }
 
     // Set the selected date to the hidden input field
-    selectedDateInput.value = date;
+    selectedDateInput.value = formatDate(date);
 
     // Highlight the selected date
     cell.classList.add('selected');
+}
+
+function formatDate(dateString) {
+    const options = { year: 'numeric', month: 'long', day: 'numeric' };
+    const formattedDate = new Date(dateString).toLocaleDateString(undefined, options);
+    return formattedDate;
 }
 
 // Initial calendar generation
