@@ -225,22 +225,16 @@ section.contact form button:hover {
 /* Additional styling for a professional look (you can adjust colors as needed) */
 section.contact form input,
 section.contact form select,
-section.contact form textarea {
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-    width: 100%;
-    padding: 12px;
-    margin-bottom: 15px;
-}
-
-section.contact form input,
-section.contact form select,
 section.contact form textarea,
 section.appointment form input,
 section.appointment form select,
 section.appointment form textarea {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
     width: 50%; /* Adjust the width as needed */
+    padding: 12px;
+    margin-bottom: 15px;
 }
 
 /* Add box shadow to the form for a subtle depth effect */
@@ -272,7 +266,10 @@ section.appointment form label {
     margin-bottom: 15px;
 }
 
+/* Common styles for form inputs and selects */
+section.contact form input,
 section.appointment form input,
+section.contact form select,
 section.appointment form select {
     width: 100%;
     padding: 10px;
