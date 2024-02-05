@@ -1,4 +1,4 @@
-/* CSS Reset */
+/* Reset and global styles */
 body, h1, h2, h3, p, ul, ol, li, figure, figcaption, blockquote, dl, dd, dt {
     margin: 0;
     padding: 0;
@@ -11,6 +11,7 @@ html {
 *, *:before, *:after {
     box-sizing: inherit;
 }
+
 /* Reset and global styles */
 body {
     font-family: 'Proxima Nova', Arial, sans-serif;
@@ -157,6 +158,7 @@ section.contact {
 
 section.contact h2 {
     color: #333;
+    margin-bottom: 20px; /* Add margin to create space between heading and form */
 }
 
 section.contact form {
@@ -178,7 +180,7 @@ section.contact form h2 {
     text-align: center;
 }
 
-/* Left-align the labels */
+/* Add margin to the labels for spacing */
 section.contact form label {
     display: block;
     margin-bottom: 15px;
@@ -187,40 +189,9 @@ section.contact form label {
     text-align: left;
 }
 
-section.contact form input,
-section.contact form select,
-section.contact form textarea {
-    width: 100%;
-    padding: 15px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-}
-
-section.contact form button {
-    display: block;
-    margin: 0 auto;
-    background-color: #3498db;
-    color: #fff;
-    padding: 15px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-section.contact form button:hover {
-    background-color: #2980b9;
-}
-
-/* Center-align Preferred Time label */
+/* Increase the margin-bottom for the last label to create space before the button */
 section.contact form label[for="preferred-time"] {
-    text-align: center;
-    display: block;
-    margin-bottom: 15px;
-    color: #333;
-    font-weight: bold;
+    margin-bottom: 20px;
 }
 
 /* Modernizing time options */
@@ -233,6 +204,40 @@ section.contact form select {
     border: 1px solid #ccc;
     border-radius: 4px;
     box-sizing: border-box;
+}
+
+/* Increase padding for the button for better visibility and aesthetics */
+section.contact form button {
+    display: block;
+    margin: 0 auto;
+    background-color: #3498db;
+    color: #fff;
+    padding: 15px 30px; /* Increase padding */
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+section.contact form button:hover {
+    background-color: #2980b9;
+}
+
+/* Additional styling for a professional look (you can adjust colors as needed) */
+section.contact form input,
+section.contact form select,
+section.contact form textarea {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+}
+
+/* Add box shadow to the form for a subtle depth effect */
+section.contact form {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
 }
 
 /* Appointment section styles */
@@ -382,14 +387,6 @@ footer strong {
     color: #fff;
     display: block;
 }
-/* Reset and global styles */
-html {
-    box-sizing: border-box;
-}
-
-*, *:before, *:after {
-    box-sizing: inherit;
-}
 
 /* Media query for screens up to 768px (typical mobile devices) */
 @media only screen and (max-width: 768px) {
@@ -471,7 +468,7 @@ html {
         transform: scaleX(1);
         transform-origin: left;
     }
-}
+
     .menu-items {
         display: flex;
         justify-content: space-around;
