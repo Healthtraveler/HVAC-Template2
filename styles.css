@@ -521,9 +521,11 @@ footer strong {
         align-items: center; /* Center content horizontally */
     }
 
+    .calendar-table th,
     .calendar-table td {
-        font-size: 14px; /* Adjust the font size as needed */
-        padding: 8px; /* Adjust the padding as needed */
+        width: auto; /* Adjust the width for mobile */
+        padding: 8px;
+        font-size: 14px;
     }
 }
 
