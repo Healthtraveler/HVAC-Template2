@@ -29,27 +29,86 @@
         <h1>General maintenance for $125 & free consultations. EPA Certified and quality gauranteed</h1>
     </section>
 
-    <section class="services">
+   <section class="services">
         <h2>Our Services</h2>
         <ul>
-           <li>
-    <strong>Heating and Cooling</strong>
-</li>
-<li>
-    <strong>Plumbing</strong>
-</li>
-<li>
-    <strong>Ventilation</strong>
-</li>
-<li>
-    <strong>Air Quality Control</strong>
-</li>
-<li>
-    <strong>Emergency Repairs</strong>
-</li>
-<li>
-    <strong>Regular Maintenance</strong>
-</li>
+            <!-- Service 1: Heating and Cooling -->
+            <li class="service-box" id="service1">
+                <strong>Heating and Cooling</strong>
+                <div class="service-info">
+                    <p>Our Heating and Cooling service ensures your indoor environment stays comfortable year-round.
+                        We specialize in HVAC system installation, repair, and maintenance. Whether it's fixing
+                        heating issues during winter or ensuring your air conditioning works efficiently in the
+                        summer, we've got you covered.</p>
+                    <p>Our certified technicians use state-of-the-art equipment to diagnose and address HVAC problems
+                        promptly. We prioritize energy efficiency and cost-effectiveness, providing solutions that
+                        enhance your home's overall comfort.</p>
+                </div>
+            </li>
+
+            <!-- Service 2: Plumbing -->
+            <li class="service-box" id="service2">
+                <strong>Plumbing</strong>
+                <div class="service-info">
+                    <p>Experience reliable plumbing services with our team. From leaky faucets to complex pipe
+                        installations, we handle it all. Our skilled plumbers are equipped to address plumbing
+                        emergencies and routine maintenance alike.</p>
+                    <p>We prioritize quality workmanship and use durable materials to ensure long-lasting results.
+                        Whether it's a clogged drain, burst pipe, or plumbing fixture installation, trust us for
+                        efficient and effective solutions.</p>
+                </div>
+            </li>
+
+            <!-- Service 3: Ventilation -->
+            <li class="service-box" id="service3">
+                <strong>Ventilation</strong>
+                <div class="service-info">
+                    <p>Optimize your indoor air quality with our ventilation services. Proper ventilation is crucial
+                        for maintaining a healthy and comfortable living space. We specialize in installing,
+                        repairing, and maintaining ventilation systems to ensure fresh and clean air throughout
+                        your home.</p>
+                    <p>Our team assesses your ventilation needs and provides tailored solutions for improved air
+                        circulation. Breathe easy with our ventilation services designed to enhance your overall
+                        well-being.</p>
+                </div>
+            </li>
+
+            <!-- Service 4: Air Quality Control -->
+            <li class="service-box" id="service4">
+                <strong>Air Quality Control</strong>
+                <div class="service-info">
+                    <p>Prioritize your health with our Air Quality Control services. We offer comprehensive solutions
+                        to enhance the air you breathe indoors. Our team assesses air quality issues, recommends
+                        improvements, and installs advanced air purification systems.</p>
+                    <p>Whether you're dealing with allergens, pollutants, or humidity concerns, we provide
+                        state-of-the-art solutions to create a healthier living environment for you and your family.</p>
+                </div>
+            </li>
+
+            <!-- Service 5: Emergency Repairs -->
+            <li class="service-box" id="service5">
+                <strong>Emergency Repairs</strong>
+                <div class="service-info">
+                    <p>Count on us for prompt and reliable Emergency Repair services. We understand that certain issues
+                        require immediate attention. Our emergency repair team is available 24/7 to address
+                        unexpected HVAC, plumbing, or ventilation issues.</p>
+                    <p>Whether it's a sudden breakdown, leak, or airflow problem, we respond swiftly to restore
+                        functionality and comfort in your home. Your safety and well-being are our top priorities.</p>
+                </div>
+            </li>
+
+            <!-- Service 6: Regular Maintenance -->
+            <li class="service-box" id="service6">
+                <strong>Regular Maintenance</strong>
+                <div class="service-info">
+                    <p>Maintain the efficiency and longevity of your home systems with our Regular Maintenance
+                        services. Our proactive approach involves scheduled inspections, cleaning, and adjustments to
+                        prevent potential issues.</p>
+                    <p>Regular maintenance not only ensures optimal performance but also helps you avoid costly
+                        repairs in the long run. Trust us to keep your HVAC, plumbing, and ventilation systems in
+                        top-notch condition.</p>
+                </div>
+            </li>
         </ul>
     </section>
 
@@ -106,6 +165,25 @@
     <script src="calendar.js"></script> <!-- Calendar Script -->
     <script src="time.js"></script>
     <script src="your-form-validation-script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const serviceBoxes = document.querySelectorAll('.service-box');
+
+            serviceBoxes.forEach(function (box) {
+                box.addEventListener('click', function () {
+                    // Toggle the expanded class on the clicked service box
+                    box.classList.toggle('expanded');
+
+                    // Collapse other service boxes
+                    serviceBoxes.forEach(function (otherBox) {
+                        if (otherBox !== box && otherBox.classList.contains('expanded')) {
+                            otherBox.classList.remove('expanded');
+                        }
+                    });
+                });
+            });
+        });
+    </script>
     <script>
        // JavaScript code for handling the collapsible menu
 const menuIcon = document.getElementById('menuIcon');
