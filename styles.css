@@ -487,6 +487,11 @@ footer strong {
     }
 }
 
+/* Ensure proper spacing for "Contact Us" and "Our Services" */
+    section.contact, section.services {
+        padding: 2em;
+    }
+
     section.contact form, section.appointment form, section.services, section.services h2, footer {
         max-width: 100%;
     }
@@ -531,7 +536,9 @@ footer strong {
         box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
         transition: transform 0.3s;
     }
-
+section.services li {
+        height: 200px; /* Adjust the height as needed */
+    }
     footer {
         background-color: #333;
         color: #fff;
