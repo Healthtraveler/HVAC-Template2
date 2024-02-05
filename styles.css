@@ -591,20 +591,25 @@ section.services {
     padding: 2em;
     text-align: center;
 }
-   .service-box {
+     .service-box {
         width: 100%;
+        max-width: 100%; /* Ensure the box doesn't exceed the screen width */
+        box-sizing: border-box; /* Include padding and border in the box's total width and height */
         margin-bottom: 20px; /* Adjust as needed for spacing between service containers */
+        overflow: hidden; /* Hide any content that overflows the box */
     }
 
     .service-info {
         display: none; /* Initially hide service info on mobile */
         padding: 10px; /* Add padding for better readability */
+        font-size: 4vw; /* Set font size as a percentage of viewport width */
+        line-height: 1.5; /* Set line height for better readability */
     }
 
     .service-box.expanded .service-info {
         display: block; /* Show service info when expanded on mobile */
     }
-}
+    
 section.services h2 {
     color: #333;
 }
