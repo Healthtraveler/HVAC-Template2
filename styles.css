@@ -392,7 +392,7 @@ footer strong {
     header img {
         max-width: 100%;
         height: auto;
-        max-height: 60px;
+        max-height: 80px;
         margin: 15px auto;
     }
 
@@ -413,7 +413,7 @@ footer strong {
     }
 
     .calendar-container {
-        width: 100%;
+        width: 90%;
         margin: 0 auto;
         padding: 10px; /* Added padding for better mobile view */
     }
