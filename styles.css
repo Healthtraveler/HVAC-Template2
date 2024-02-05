@@ -591,7 +591,20 @@ section.services {
     padding: 2em;
     text-align: center;
 }
+   .service-box {
+        width: 100%;
+        margin-bottom: 20px; /* Adjust as needed for spacing between service containers */
+    }
 
+    .service-info {
+        display: none; /* Initially hide service info on mobile */
+        padding: 10px; /* Add padding for better readability */
+    }
+
+    .service-box.expanded .service-info {
+        display: block; /* Show service info when expanded on mobile */
+    }
+}
 section.services h2 {
     color: #333;
 }
