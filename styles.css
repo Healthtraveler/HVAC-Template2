@@ -143,10 +143,20 @@ section.services li {
     border-radius: 8px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 25px; /* Adjust the font size as needed */
 }
 
 section.services li:hover {
     transform: translateY(-5px);
+}
+
+/* Additional styling for the box content */
+section.services li p {
+    margin: 0;
 }
 
 /* Contact section styles */
