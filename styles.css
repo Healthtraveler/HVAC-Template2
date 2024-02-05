@@ -190,7 +190,7 @@ section.contact form label {
 
 /* Increase the margin-bottom for the last label to create space before the button */
 section.contact form label[for="preferred-time"] {
-    margin-bottom: 25px;
+    margin-bottom: 15px;
 }
 
 /* Modernizing time options */
