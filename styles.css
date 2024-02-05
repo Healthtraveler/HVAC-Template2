@@ -14,7 +14,7 @@ header {
     padding: 1em;
     display: flex;
     align-items: center;
-    justify-content: space-between; /* Added space-between for a modern look */
+    justify-content: space-between;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
@@ -67,7 +67,7 @@ nav a:hover::before {
 /* Mega Menu styles */
 .menu-items {
     display: flex;
-    flex-direction: row; /* Display navigation elements horizontally */
+    flex-direction: row;
     justify-content: center;
     padding: 15px;
     z-index: 1;
@@ -77,8 +77,8 @@ nav a:hover::before {
 .menu-items a {
     color: #fff;
     text-decoration: none;
-    margin: 0 60px; /* Adjust margin for spacing */
-    font-size: 20px; /* Increased font size for a more prominent look */
+    margin: 0 60px;
+    font-size: 20px;
     transition: color 0.3s;
 }
 
@@ -87,7 +87,7 @@ nav a:hover::before {
 }
 
 .menu-icon {
-    display: none; /* Hide the menu icon */
+    display: none;
 }
 
 /* Hero section styles */
@@ -170,8 +170,8 @@ section.contact form label {
     display: block;
     margin-bottom: 15px;
     color: #333;
-    font-weight: bold; /* Make labels bold */
-    text-align: left; /* Left-align labels */
+    font-weight: bold;
+    text-align: left;
 }
 
 section.contact form input,
@@ -320,7 +320,7 @@ section.appointment form button {
     padding: 10px;
     text-align: center;
     transition: background 0.3s;
-    font-family: 'Proxima Nova', Arial, sans-serif; /* Apply Proxima Nova font to all text */
+    font-family: 'Proxima Nova', Arial, sans-serif;
 }
 
 .calendar-table th {
@@ -349,8 +349,8 @@ section.appointment form button {
 
 /* Modernizing time options */
 .calendar-table select {
-    font-family: 'Proxima Nova', Arial, sans-serif; /* Apply Proxima Nova font to select */
-    font-size: 120%; /* Increase font size by 20% */
+    font-family: 'Proxima Nova', Arial, sans-serif;
+    font-size: 120%;
 }
 
 /* Footer styles */
@@ -374,7 +374,7 @@ footer strong {
 @media only screen and (max-width: 768px) {
     /* Mobile styles */
     body {
-        font-size: 16px; /* Set a base font size */
+        font-size: 16px;
     }
 
     header {
@@ -384,8 +384,8 @@ footer strong {
         align-items: center;
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
         flex-direction: column;
-        background-color: rgba(51, 51, 51, 0.9); /* Match desktop header background color */
-        color: #fff; /* Match desktop header text color */
+        background-color: rgba(51, 51, 51, 0.9);
+        color: #fff;
     }
 
     header img {
@@ -396,19 +396,19 @@ footer strong {
     }
 
     nav a {
-        color: #fff; /* Match desktop navigation link color */
+        color: #fff;
     }
 
     nav a:hover {
-        color: #ecf0f1; /* Match desktop navigation link hover color */
+        color: #ecf0f1;
     }
 
     .menu-items a {
-        color: #fff; /* Match desktop menu item color */
+        color: #fff;
     }
 
     .menu-items a:hover {
-        color: #3498db; /* Match desktop menu item hover color */
+        color: #3498db;
     }
 
     .calendar-container {
