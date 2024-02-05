@@ -166,12 +166,22 @@
     <script src="calendar.js"></script> <!-- Calendar Script -->
     <script src="time.js"></script>
     <script src="your-form-validation-script.js"></script>
-  <script>
+ <script>
 document.addEventListener('DOMContentLoaded', function () {
     const serviceBoxes = document.querySelectorAll('.service-box');
+    let inactivityTimer;
+
+    function hideServiceInfo(box) {
+        box.classList.remove('expanded');
+        box.querySelector('.service-info').style.display = 'none';
+        box.querySelector('.service-name').style.display = 'block';
+    }
 
     serviceBoxes.forEach(function (box) {
         box.addEventListener('click', function () {
+            // Clear the existing inactivity timer
+            clearTimeout(inactivityTimer);
+
             // Toggle the expanded class on the clicked service box
             box.classList.toggle('expanded');
 
@@ -186,11 +196,14 @@ document.addEventListener('DOMContentLoaded', function () {
             // Collapse other service boxes
             serviceBoxes.forEach(function (otherBox) {
                 if (otherBox !== box && otherBox.classList.contains('expanded')) {
-                    otherBox.classList.remove('expanded');
-                    otherBox.querySelector('.service-info').style.display = 'none';
-                    otherBox.querySelector('.service-name').style.display = 'block';
+                    hideServiceInfo(otherBox);
                 }
             });
+
+            // Set a timer to automatically hide the service info after 5 seconds of inactivity
+            inactivityTimer = setTimeout(function () {
+                hideServiceInfo(box);
+            }, 5000);
         });
     });
 });
