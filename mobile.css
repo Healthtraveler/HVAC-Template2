@@ -1,3 +1,4 @@
+User
 /* Mobile styles */
 body {
     font-size: 16px; /* Set a base font size */
@@ -68,18 +69,18 @@ header img {
     color: #3498db;
 }
 
-/* Responsive adjustments for calendar container and contact form */
-.calendar-container {
-    width: 80%; /* Set calendar container width to 80% for mobile */
-    margin: 0 auto; /* Center the container on the screen */
-}
+    /* Calendar container */
+    .calendar-container {
+        width: 80%; /* Set calendar container width to 80% */
+    }
 
-section.contact {
-    width: 80%; /* Set contact section width to 80% for mobile */
-    margin: 0 auto; /* Center the section on the screen */
-    padding: 2em; /* Adjust padding as needed for mobile view */
-}
+    /* Contact section */
+    section.contact {
+        width: 80%; /* Set contact section width to 80% */
+        margin: 0 auto; /* Center the section on the screen */
+        padding: 2em; /* Adjust padding as needed for mobile view */
+    }
 
-section.contact form {
-    max-width: none; /* Remove max-width for full-width form */
-}
+    section.contact form {
+        max-width: none; /* Remove max-width for full-width form */
+    }
