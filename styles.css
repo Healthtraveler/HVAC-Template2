@@ -296,19 +296,6 @@ section.appointment form label {
     margin-bottom: 15px;
 }
 
-/* Common styles for form inputs and selects */
-section.contact form input,
-section.appointment form input,
-section.contact form select,
-section.appointment form select {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-}
-
 /* Adjust the size of the time selection dropdown */
 section.contact form select,
 section.appointment form select {
