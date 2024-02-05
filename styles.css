@@ -399,10 +399,9 @@ html {
         font-size: 16px;
         /* Add body VH to 100 */
         height: 100vh;
-        padding: 10px; /* Added padding for better mobile view */
-        /*add padding 2% to body left A.L
-        margin-left: 2%; */
-        overflow-x: hidden;
+        overflow-x: hidden; /* Hide horizontal scrollbar */
+        margin: 0; /* Reset margin */
+        padding: 0; /* Reset padding */
     }
 
     header {
