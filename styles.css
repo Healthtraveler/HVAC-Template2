@@ -403,6 +403,11 @@ footer strong {
     nav a:hover {
         color: #ecf0f1;
     }
+/* added justify-content:space-around to menu-items */
+    .menu-items {
+       display: flex;
+        justify-content: space-around;
+    }
 
     .menu-items a {
         color: #fff;
