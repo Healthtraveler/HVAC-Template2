@@ -35,15 +35,9 @@ header {
 header img {
     max-width: 100%;
     height: auto;
-    max-height: 250px; /* Updated size for desktop logo */
+    max-height: 250px;
     margin-right: 15px;
 }
-
-/* Media query for screens above 768px (typical desktop devices) */
-@media only screen and (min-width: 769px) {
-    header img {
-        max-height: 250px; /* Updated size for mobile logo */
-    }
 
 /* Navigation styles */
 nav {
@@ -158,7 +152,7 @@ section.services li {
 /* Style for the bold text with 3D effect */
 section.services li strong {
     font-weight: bold;
-    font-size: 18px;
+    font-size: 18px; /* Adjust the font size as needed */
     position: relative;
 }
 
@@ -168,7 +162,7 @@ section.services li strong::after {
     position: absolute;
     top: 0;
     left: 0;
-    color: #3498db;
+    color: #3498db; /* Adjust the color as needed */
 }
 
 section.services li strong::before {
@@ -187,17 +181,17 @@ section.services li p {
 
 /* Contact section styles */
 section.contact {
-    padding: 2em;
+    padding: 2em; /* Adjust padding as needed */
     text-align: center;
 }
 
 section.contact h2 {
     color: #333;
-    margin-bottom: 25px;
+    margin-bottom: 25px; /* Add margin to create space between heading and form */
 }
 
 section.contact form {
-    max-width: 100%;
+    max-width: 600px;
     margin: 0 auto;
     background-color: #fff;
     padding: 20px;
@@ -247,7 +241,7 @@ section.contact form button {
     margin: 0 auto;
     background-color: #3498db;
     color: #fff;
-    padding: 15px 30px;
+    padding: 15px 30px; /* Increase padding */
     border: none;
     border-radius: 4px;
     cursor: pointer;
@@ -260,12 +254,15 @@ section.contact form button:hover {
 
 /* Additional styling for a professional look (you can adjust colors as needed) */
 section.contact form input,
+section.appointment form input,
 section.contact form select,
-section.contact form textarea {
+section.appointment form select,
+section.contact form textarea,
+section.appointment form textarea {
     border: 1px solid #ccc;
     border-radius: 4px;
     box-sizing: border-box;
-    width: 50%;
+    width: 50%; /* Adjust the width as needed */
     padding: 12px;
     margin-bottom: 15px;
 }
@@ -277,7 +274,8 @@ section.contact form {
 
 /* Appointment section styles */
 section.appointment {
-    padding: 2em;
+    padding: 2em; /* Adjust padding as needed */
+    text-align: center;
 }
 
 section.appointment h2 {
@@ -301,7 +299,7 @@ section.appointment form label {
 /* Adjust the size of the time selection dropdown */
 section.contact form select,
 section.appointment form select {
-    width: 50%;
+    width: 50%; /* Adjust the width as needed */
 }
 
 section.appointment form button {
@@ -419,139 +417,125 @@ footer strong {
 
 /* Media query for screens up to 768px (typical mobile devices) */
 @media only screen and (max-width: 768px) {
-    section.contact form input,
+     section.contact form input,
     section.appointment form input,
     section.contact form select,
     section.appointment form select,
     section.contact form textarea,
     section.appointment form textarea {
+        width: 100%; /* Set the width to 100% for mobile */
+    }
+    /* Mobile styles */
+    body {
+        font-size: 16px;
+        height: 100vh;
         width: 100%;
+        overflow-x: hidden;
+        margin: 0;
+        padding: 0;
+    }
+
+    * {
+        box-sizing: border-box; /* Apply box-sizing to all elements */
+    }
+
+    header, section, footer {
+        width: 100%;
+        padding: 0;
+        margin: 0;
+    }
+
+    header {
+        padding: 1em;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        flex-direction: column;
+        background-color: rgba(51, 51, 51, 0.9);
+        color: #fff;
+    }
+
+    header img {
+        max-width: 100%;
+        height: auto;
+        max-height: 80px;
+        margin: 15px auto;
+    }
+
+    nav {
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+    }
+
+    nav a {
+        color: #fff;
+        text-decoration: none;
+        margin: 0 10px; /* Adjust the margin as needed */
+        font-size: 18px;
+        position: relative;
+        transition: color 0.3s;
+    }
+
+    /* Additional styles for 3D effect if needed */
+    nav a::before {
+        content: '';
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 3px;
+        bottom: -6px;
+        left: 0;
+        background: #3498db;
+        transform: scaleX(0);
+        transform-origin: right;
+        transition: transform 0.3s ease-in-out;
+    }
+
+    nav a:hover {
+        color: #ecf0f1;
+    }
+
+    nav a:hover::before {
+        transform: scaleX(1);
+        transform-origin: left;
+    }
+
+    .menu-items {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    section.contact, section.services {
+    padding: 4em;
+}
+    .calendar-container, section.contact, section.appointment, section.services, footer {
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        display: flex; /* Ensure containers are flexible */
+        flex-direction: column; /* Stack elements vertically */
+        align-items: center; /* Center content horizontally */
     }
 
     .calendar-table th,
     .calendar-table td {
-        width: calc(100% / 7);
+        width: auto; /* Adjust the width for mobile */
         padding: 8px;
         font-size: 14px;
     }
 }
 
-/* Media query for screens above 768px (typical desktop devices) */
-@media only screen and (min-width: 769px) {
-    section.contact form input,
-    section.appointment form input,
-    section.contact form select,
-    section.appointment form select,
-    section.contact form textarea,
-    section.appointment form textarea {
-        width: 50%;
-    }
-}
-
-/* Mobile styles */
-body {
-    font-size: 16px;
-    height: 100vh;
-    width: 100%;
-    overflow-x: hidden;
-    margin: 0;
-    padding: 0;
-}
-
-* {
-    box-sizing: border-box;
-}
-
-header, section, footer {
-    width: 100%;
-    padding: 0;
-    margin: 0;
-}
-
-header {
-    padding: 1em;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    flex-direction: column;
-    background-color: rgba(51, 51, 51, 0.9);
-    color: #fff;
-}
-
-header img {
-    max-width: 100%;
-    height: auto;
-    max-height: 80px;
-    margin: 15px auto;
-}
-
-nav {
-    width: 100%;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    justify-content: center;
-}
-
-nav a {
-    color: #fff;
-    text-decoration: none;
-    margin: 0 10px;
-    font-size: 18px;
-    position: relative;
-    transition: color 0.3s;
-}
-
-/* Additional styles for 3D effect if needed */
-nav a::before {
-    content: '';
-    display: block;
-    position: absolute;
-    width: 100%;
-    height: 3px;
-    bottom: -6px;
-    left: 0;
-    background: #3498db;
-    transform: scaleX(0);
-    transform-origin: right;
-    transition: transform 0.3s ease-in-out;
-}
-
-nav a:hover {
-    color: #ecf0f1;
-}
-
-nav a:hover::before {
-    transform: scaleX(1);
-    transform-origin: left;
-}
-
-.menu-items {
-    display: flex;
-    justify-content: space-around;
-}
-
-section.contact,
-section.appointment,
-section.services,
-footer {
-    padding: 0;
-    margin: 0;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
 /* Ensure proper spacing for "Contact Us" and "Our Services" */
-section.contact,
-section.services {
-    padding: 2em;
-    overflow: hidden;
-}
+    section.contact, section.services {
+        padding: 2em;
+        overflow: hidden; /* Add this line to prevent overflow */
+    }
 
-section.contact form,
+    section.contact form,
 section.appointment form,
 section.services,
 section.services h2,
@@ -569,7 +553,7 @@ section.appointment form {
     border-radius: 8px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s;
-    width: 100%;
+    width: 100%; /* Ensure the form takes up full width */
 }
 
 section.contact form input,
@@ -578,7 +562,7 @@ section.contact form select,
 section.appointment form select,
 section.contact form textarea,
 section.appointment form textarea {
-    width: 100%;
+    width: 100%; /* Adjust the width as needed for mobile */
 }
 
 section.services {
@@ -590,32 +574,31 @@ section.services h2 {
     color: #333;
 }
 
-section.services ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
+    section.services ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
 
+    section.services li {
+        width: calc(100% - 20px);
+        margin: 10px;
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s;
+    }
 section.services li {
-    width: calc(100% - 20px);
-    margin: 10px;
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s;
-}
-
-section.services li {
-    height: 200px;
-}
-
-footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 1em;
+        height: 200px; /* Adjust the height as needed */
+    }
+    footer {
+        background-color: #333;
+        color: #fff;
+        text-align: center;
+        padding: 1em;
+    }
 }
