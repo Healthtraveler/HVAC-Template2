@@ -151,8 +151,7 @@ section.services li:hover {
 
 /* Contact section styles */
 section.contact {
-    padding: 4em;
-    border: 2px solid #333;
+    padding: 2em; /* Adjust padding as needed */
     text-align: center;
 }
 
@@ -242,8 +241,7 @@ section.contact form {
 
 /* Appointment section styles */
 section.appointment {
-    padding: 4em;
-    border: 2px solid #333;
+    padding: 2em; /* Adjust padding as needed */
     text-align: center;
 }
 
