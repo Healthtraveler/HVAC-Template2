@@ -1,0 +1,17 @@
+/* services.css */
+
+/* Styling for the expanded class */
+.service-box.expanded {
+    /* Add your styles for the expanded state here */
+    background-color: #f0f0f0; /* Example background color */
+    padding: 20px; /* Example padding */
+    border-radius: 8px; /* Example border radius */
+    /* Add any other styles you want to apply when the service box is expanded */
+}
+
+/* Additional styles for the content inside the expanded service box */
+.service-box.expanded .service-info {
+    /* Add your styles for the expanded state here */
+    display: block; /* Example: show the service info */
+    /* Add any other styles you want to apply to the expanded content */
+}
