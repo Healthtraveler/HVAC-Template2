@@ -490,6 +490,7 @@ footer strong {
 /* Ensure proper spacing for "Contact Us" and "Our Services" */
     section.contact, section.services {
         padding: 2em;
+        overflow: hidden; /* Add this line to prevent overflow */
     }
 
     section.contact form, section.appointment form, section.services, section.services h2, footer {
