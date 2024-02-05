@@ -2,15 +2,15 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="EPA Certified service man that provides general maintenace of HVAC services including repair; as well as residential handyman services.">
-<meta name="keywords" content="HVAC, Heating, Cooling, Plumbing, Ventilation, Air Quality">
-<meta name="author" content="Erik Pulido">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="EPA Certified service man that provides general maintenance of HVAC services including repair; as well as residential handyman services.">
+    <meta name="keywords" content="HVAC, Heating, Cooling, Plumbing, Ventilation, Air Quality">
+    <meta name="author" content="Erik Pulido">
     <title>Erik's HVAC & Maintenance</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Proxima+Nova:wght@400;700&display=swap">
-    <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="mobile.css">
+    <link rel="stylesheet" href="styles.css" media="screen and (min-width: 769px)">
+    <link rel="stylesheet" href="mobile.css" media="screen and (max-width: 768px)">
 </head>
 <body>
 
@@ -97,13 +97,21 @@
     <script src="time.js"></script>
     <script src="your-form-validation-script.js"></script>
     <script>
-        // JavaScript code for handling the collapsible menu
-        const menuIcon = document.getElementById('menuIcon');
-        const menuItems = document.getElementById('menuItems');
+       // JavaScript code for handling the collapsible menu
+const menuIcon = document.getElementById('menuIcon');
+const menuItems = document.getElementById('menuItems');
 
-        menuIcon.addEventListener('click', () => {
-            menuItems.classList.toggle('show-menu');
-        });
-    </script>
+menuIcon.addEventListener('click', () => {
+    menuItems.classList.toggle('show-menu');
+});
+
+// Close the menu when the window is resized (for better user experience)
+window.addEventListener('resize', () => {
+    if (window.innerWidth > 768) {
+        menuItems.classList.remove('show-menu');
+    }
+});
+    </script>    
+    
 </body>
 </html>

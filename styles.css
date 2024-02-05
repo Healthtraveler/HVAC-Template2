@@ -14,6 +14,7 @@ header {
     padding: 1em;
     display: flex;
     align-items: center;
+    justify-content: space-between; /* Added space-between for a modern look */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
@@ -35,6 +36,7 @@ nav a {
     text-decoration: none;
     margin: 0 15px;
     font-size: 18px;
+    position: relative;
     transition: color 0.3s;
 }
 
@@ -60,6 +62,32 @@ nav a::before {
 nav a:hover::before {
     transform: scaleX(1);
     transform-origin: left;
+}
+
+/* Mega Menu styles */
+.menu-items {
+    display: flex;
+    flex-direction: row; /* Display navigation elements horizontally */
+    justify-content: center;
+    padding: 15px;
+    z-index: 1;
+    width: 100%;
+}
+
+.menu-items a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 60px; /* Adjust margin for spacing */
+    font-size: 20px; /* Increased font size for a more prominent look */
+    transition: color 0.3s;
+}
+
+.menu-items a:hover {
+    color: #3498db;
+}
+
+.menu-icon {
+    display: none; /* Hide the menu icon */
 }
 
 /* Hero section styles */
