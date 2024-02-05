@@ -341,34 +341,3 @@ footer strong {
     color: #fff;
     display: block;
 }
-
-/* Media query for mobile view */
-@media screen and (max-width: 768px) {
-    header {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    nav {
-        margin-top: 20px;
-        order: -1;
-    }
-
-    nav a {
-        margin: 0;
-        margin-right: 15px;
-    }
-
-    section.hero h1 {
-        font-size: 24px;
-    }
-
-    section.services li {
-        flex: 0 0 calc(50% - 20px);
-    }
-
-    section.contact form,
-    section.appointment form {
-        padding: 15px;
-    }
-}
