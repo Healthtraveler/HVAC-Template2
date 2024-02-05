@@ -234,6 +234,15 @@ section.contact form textarea {
     margin-bottom: 15px;
 }
 
+section.contact form input,
+section.contact form select,
+section.contact form textarea,
+section.appointment form input,
+section.appointment form select,
+section.appointment form textarea {
+    width: 50%; /* Adjust the width as needed */
+}
+
 /* Add box shadow to the form for a subtle depth effect */
 section.contact form {
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
@@ -271,6 +280,12 @@ section.appointment form select {
     border: 1px solid #ccc;
     border-radius: 4px;
     box-sizing: border-box;
+}
+
+/* Adjust the size of the time selection dropdown */
+section.contact form select,
+section.appointment form select {
+    width: 50%; /* Adjust the width as needed */
 }
 
 section.appointment form button {
