@@ -149,10 +149,25 @@ section.services li {
     text-align: center;
 }
 
-/* Style for the bold text */
+/* Style for the bold text with 3D effect */
 section.services li strong {
     font-weight: bold;
     font-size: 18px; /* Adjust the font size as needed */
+    position: relative;
+}
+
+section.services li strong::before,
+section.services li strong::after {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: #3498db; /* Adjust the color as needed */
+}
+
+section.services li strong::before {
+    z-index: -1;
+    transform: translateY(-2px);
 }
 
 section.services li:hover {
