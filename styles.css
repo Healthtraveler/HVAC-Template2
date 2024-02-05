@@ -425,6 +425,17 @@ footer strong {
     section.appointment form textarea {
         width: 100%; /* Set the width to 100% for mobile */
     }
+/* Media query for screens above 768px (typical desktop devices) */
+@media only screen and (min-width: 769px) {
+    section.contact form input,
+    section.appointment form input,
+    section.contact form select,
+    section.appointment form select,
+    section.contact form textarea,
+    section.appointment form textarea {
+        width: 50%; /* Set the width to 50% for desktop */
+    }
+}
     /* Mobile styles */
     body {
         font-size: 16px;
@@ -523,7 +534,7 @@ footer strong {
 
     .calendar-table th,
     .calendar-table td {
-        width: auto; /* Adjust the width for mobile */
+        width: calc(100% / 7); /* Adjust the width for mobile */
         padding: 8px;
         font-size: 14px;
     }
