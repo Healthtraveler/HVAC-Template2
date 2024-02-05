@@ -439,6 +439,9 @@ html {
         padding: 0;
         margin: 0;
         width: 100%;
+        display: flex; /* Ensure containers are flexible */
+        flex-direction: column; /* Stack elements vertically */
+        align-items: center; /* Center content horizontally */
     }
 
     section.contact form, section.appointment form, section.services, section.services h2, footer {
@@ -455,6 +458,7 @@ html {
         border-radius: 8px;
         box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
         transition: transform 0.3s;
+        width: 100%; /* Ensure the form takes up full width */
     }
 
     section.services {
