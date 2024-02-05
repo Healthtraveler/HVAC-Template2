@@ -481,6 +481,12 @@ footer strong {
         align-items: center; /* Center content horizontally */
     }
 
+    .calendar-table td {
+        font-size: 14px; /* Adjust the font size as needed */
+        padding: 8px; /* Adjust the padding as needed */
+    }
+}
+
     section.contact form, section.appointment form, section.services, section.services h2, footer {
         max-width: 100%;
     }
