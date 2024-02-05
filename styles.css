@@ -208,7 +208,7 @@ section.contact form input[type="text"],
 section.contact form input[type="email"],
 section.contact form input[type="tel"],
 section.contact form textarea {
-    width: 100%; /* Set input width to 100% by default */
+    width: 50%; /* Set input width to 100% by default */
     box-sizing: border-box; /* Ensure padding and border are included in the width */
     margin-bottom: 15px; /* Add margin between inputs */
 }
