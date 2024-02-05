@@ -375,6 +375,7 @@ footer strong {
     /* Mobile styles */
     body {
         font-size: 16px;
+        padding: 10px; /* Added padding for better mobile view */
     }
 
     header {
@@ -412,14 +413,16 @@ footer strong {
     }
 
     .calendar-container {
-        width: 85%;
+        width: 100%;
         margin: 0 auto;
+        padding: 10px; /* Added padding for better mobile view */
     }
 
     section.contact {
-        width: 85%;
+        width: 100%;
         margin: 0 auto;
         padding: 2em;
+        padding: 10px; /* Added padding for better mobile view */
     }
 
     section.contact form {
