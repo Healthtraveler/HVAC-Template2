@@ -525,40 +525,44 @@ footer strong {
         overflow: hidden; /* Add this line to prevent overflow */
     }
 
-    section.contact form, section.appointment form, section.services, section.services h2, footer {
-        max-width: 100%;
-    }
+    section.contact form,
+section.appointment form,
+section.services,
+section.services h2,
+footer {
+    max-width: 100%;
+}
 
-    section.appointment {
-        padding: 2em;
-    }
+section.appointment {
+    padding: 2em;
+}
 
-    section.appointment form {
-        margin: 0;
-        padding: 20px;
-        border-radius: 8px;
-        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-        transition: transform 0.3s;
-        width: 100%; /* Ensure the form takes up full width */
-    }
+section.appointment form {
+    margin: 0;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+    width: 100%; /* Ensure the form takes up full width */
+}
 
-  section.contact form input,
-    section.appointment form input,
-    section.contact form select,
-    section.appointment form select,
-    section.contact form textarea,
-    section.appointment form textarea {
-        width: 100%; /* Adjust the width as needed for mobile */
-    }
+section.contact form input,
+section.appointment form input,
+section.contact form select,
+section.appointment form select,
+section.contact form textarea,
+section.appointment form textarea {
+    width: 100%; /* Adjust the width as needed for mobile */
+}
 
-    section.services {
-        padding: 2em;
-        text-align: center;
-    }
+section.services {
+    padding: 2em;
+    text-align: center;
+}
 
-    section.services h2 {
-        color: #333;
-    }
+section.services h2 {
+    color: #333;
+}
 
     section.services ul {
         list-style: none;
