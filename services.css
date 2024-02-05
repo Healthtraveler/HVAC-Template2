@@ -1,5 +1,10 @@
 /* services.css */
 
+/* Initially hide the service info */
+.service-box .service-info {
+    display: none;
+}
+
 /* Styling for the expanded class */
 .service-box.expanded {
     /* Add your styles for the expanded state here */
@@ -12,18 +17,6 @@
 /* Additional styles for the content inside the expanded service box */
 .service-box.expanded .service-info {
     /* Add your styles for the expanded state here */
-    display: block; /* Example: show the service info */
+    display: block; /* Show the service info when expanded */
     /* Add any other styles you want to apply to the expanded content */
-}
-
-/* Initially hide the service info */
-.service-info {
-    display: none;
-}
-
-/* Style for the expanded class */
-.service-box.expanded {
-    /* Add styles for the expanded state */
-    /* For example, you can change background color, add box shadow, etc. */
-    background-color: #f0f0f0;
 }
