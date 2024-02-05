@@ -402,9 +402,14 @@ html {
         padding: 0;
     }
 
+    * {
+        box-sizing: border-box; /* Apply box-sizing to all elements */
+    }
+
     header, section, footer {
         width: 100%;
-        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
     }
 
     header {
@@ -431,10 +436,9 @@ html {
     }
 
     .calendar-container, section.contact, section.appointment, section.services, footer {
+        padding: 0;
+        margin: 0;
         width: 100%;
-        padding: 0; /* Remove unnecessary padding */
-        margin: 0; /* Remove unnecessary margin */
-        box-sizing: border-box;
     }
 
     section.contact form, section.appointment form, section.services, section.services h2, footer {
@@ -442,11 +446,11 @@ html {
     }
 
     section.appointment {
-        padding: 2em; /* Adjust padding as needed */
+        padding: 2em;
     }
 
     section.appointment form {
-        margin: 0; /* Remove margin to stretch to full width */
+        margin: 0;
         padding: 20px;
         border-radius: 8px;
         box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
@@ -472,7 +476,7 @@ html {
     }
 
     section.services li {
-        width: calc(100% - 20px); /* Full width with 10px padding on each side */
+        width: calc(100% - 20px);
         margin: 10px;
         background-color: #fff;
         padding: 20px;
