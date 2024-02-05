@@ -166,7 +166,7 @@
     <script src="calendar.js"></script> <!-- Calendar Script -->
     <script src="time.js"></script>
     <script src="your-form-validation-script.js"></script>
-   <script>
+  <script>
 document.addEventListener('DOMContentLoaded', function () {
     const serviceBoxes = document.querySelectorAll('.service-box');
 
@@ -177,11 +177,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
             // Toggle the visibility of the service info within the clicked box
             const serviceInfo = box.querySelector('.service-info');
-            if (serviceInfo.style.display === 'block') {
-                serviceInfo.style.display = 'none';
-            } else {
-                serviceInfo.style.display = 'block';
-            }
+            serviceInfo.style.display = (box.classList.contains('expanded')) ? 'block' : 'none';
 
             // Collapse other service boxes
             serviceBoxes.forEach(function (otherBox) {
