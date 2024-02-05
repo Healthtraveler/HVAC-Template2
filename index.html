@@ -134,7 +134,7 @@
             </div>
             <input type="hidden" id="selectedDate" name="selectedDate">
             <label for="preferred-time">Preferred Time:</label>
-            <select id="preferred-time" name="preferred-time"> required>
+            <select id="preferred-time" name="preferred-time" required>
                 <option value="07:00 AM">07:00 AM</option>
                 <option value="08:00 AM">08:00 AM</option>
                 <option value="09:00 AM">09:00 AM</option>
@@ -165,25 +165,25 @@
     <script src="calendar.js"></script> <!-- Calendar Script -->
     <script src="time.js"></script>
     <script src="your-form-validation-script.js"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const serviceBoxes = document.querySelectorAll('.service-box');
+   <script>
+    document.addEventListener('DOMContentLoaded', function () {
+    const serviceBoxes = document.querySelectorAll('.service-box');
 
-            serviceBoxes.forEach(function (box) {
-                box.addEventListener('click', function () {
-                    // Toggle the expanded class on the clicked service box
-                    box.classList.toggle('expanded');
+    serviceBoxes.forEach(function (box) {
+        box.addEventListener('click', function () {
+            // Toggle the expanded class on the clicked service box
+            box.classList.toggle('expanded');
 
-                    // Collapse other service boxes
-                    serviceBoxes.forEach(function (otherBox) {
-                        if (otherBox !== box && otherBox.classList.contains('expanded')) {
-                            otherBox.classList.remove('expanded');
-                        }
-                    });
-                });
+            // Collapse other service boxes
+            serviceBoxes.forEach(function (otherBox) {
+                if (otherBox !== box && otherBox.classList.contains('expanded')) {
+                    otherBox.classList.remove('expanded');
+                }
             });
         });
-    </script>
+    });
+});
+       <script>
     <script>
        // JavaScript code for handling the collapsible menu
 const menuIcon = document.getElementById('menuIcon');
