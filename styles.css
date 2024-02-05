@@ -391,7 +391,7 @@ footer strong {
     header img {
         max-width: 100%;
         height: auto;
-        max-height: 30px;
+        max-height: 60px;
         margin: 15px auto;
     }
 
@@ -412,12 +412,12 @@ footer strong {
     }
 
     .calendar-container {
-        width: 100%;
+        width: 85%;
         margin: 0 auto;
     }
 
     section.contact {
-        width: 100%;
+        width: 85%;
         margin: 0 auto;
         padding: 2em;
     }
