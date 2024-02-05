@@ -382,7 +382,6 @@ footer strong {
     color: #fff;
     display: block;
 }
-
 /* Reset and global styles */
 html {
     box-sizing: border-box;
@@ -406,15 +405,15 @@ html {
     header, section, footer {
         width: 100%;
         box-sizing: border-box;
-        display: flex; /* Add flexbox to every section */
-        flex-direction: column; /* Stack items vertically in mobile */
     }
 
     header {
         padding: 1em;
+        display: flex;
         justify-content: space-between;
         align-items: center;
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        flex-direction: column;
         background-color: rgba(51, 51, 51, 0.9);
         color: #fff;
     }
@@ -429,18 +428,25 @@ html {
     .menu-items {
         display: flex;
         justify-content: space-around;
+    }
+
+    .calendar-container, section.contact, section.appointment, section.services, footer {
         width: 100%;
+        padding: 0; /* Remove unnecessary padding */
+        margin: 0; /* Remove unnecessary margin */
         box-sizing: border-box;
     }
 
-    .calendar-container, section.contact, section.appointment, section.services {
-        flex: 1; /* Make these sections flexible to fill available space */
-        padding: 10px;
+    section.contact form, section.appointment form, section.services, section.services h2, footer {
+        max-width: 100%;
     }
 
-    section.contact form, section.appointment form {
-        max-width: 100%;
-        margin: 0;
+    section.appointment {
+        padding: 2em; /* Adjust padding as needed */
+    }
+
+    section.appointment form {
+        margin: 0; /* Remove margin to stretch to full width */
         padding: 20px;
         border-radius: 8px;
         box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
@@ -450,7 +456,6 @@ html {
     section.services {
         padding: 2em;
         text-align: center;
-        box-sizing: border-box;
     }
 
     section.services h2 {
