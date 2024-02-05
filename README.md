@@ -26,7 +26,7 @@ Just download
 
 ## Usage
 
-Website simple tenplate to receive information and display service
+Website simple template to receive information and display service
 
 ## Contributing
 
