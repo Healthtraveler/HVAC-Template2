@@ -147,7 +147,12 @@ section.services li {
     align-items: center;
     justify-content: center;
     text-align: center;
-    font-size: 25px; /* Adjust the font size as needed */
+}
+
+/* Style for the bold text */
+section.services li strong {
+    font-weight: bold;
+    font-size: 18px; /* Adjust the font size as needed */
 }
 
 section.services li:hover {
