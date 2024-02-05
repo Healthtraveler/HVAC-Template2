@@ -221,7 +221,7 @@ section.contact form textarea {
     section.contact form textarea {
         width: 50%; /* Set input width to 50% for desktop */
     }
-}
+    
 section.contact form:hover {
     transform: translateY(-5px);
 }
