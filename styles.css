@@ -376,6 +376,9 @@ footer strong {
     body {
         font-size: 16px;
         padding: 10px; /* Added padding for better mobile view */
+        /*add padding 15% to entire body A.L */
+        margin-left: 15%;
+        margin-right: 15%; 
     }
 
     header {
@@ -403,7 +406,7 @@ footer strong {
     nav a:hover {
         color: #ecf0f1;
     }
-/* added justify-content:space-around to menu-items */
+/* added justify-content:space-around to menu-items A.L */
     .menu-items {
        display: flex;
         justify-content: space-around;
