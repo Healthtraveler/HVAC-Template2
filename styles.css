@@ -227,7 +227,7 @@ section.contact form label[for="preferred-time"] {
 section.contact form select {
     font-family: 'Proxima Nova', Arial, sans-serif;
     font-size: 120%;
-    width: 50%;
+    width: 100%;
     padding: 10px;
     margin-bottom: 15px;
     border: 1px solid #ccc;
@@ -254,10 +254,13 @@ section.contact form button:hover {
 
 /* Additional styling for a professional look (you can adjust colors as needed) */
 section.contact form input,
+section.appointment form input {
+    width: 50%; /* Adjust the width as needed */
+}
+
 section.contact form select,
-section.contact form textarea,
-section.appointment form input,
 section.appointment form select,
+section.contact form textarea,
 section.appointment form textarea {
     border: 1px solid #ccc;
     border-radius: 4px;
