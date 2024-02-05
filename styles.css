@@ -425,6 +425,7 @@ footer strong {
     section.appointment form textarea {
         width: 100%; /* Set the width to 100% for mobile */
     }
+}
 /* Media query for screens above 768px (typical desktop devices) */
 @media only screen and (min-width: 769px) {
     section.contact form input,
