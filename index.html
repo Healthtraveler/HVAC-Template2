@@ -35,8 +35,8 @@
         <ul>
             <!-- Service 1: Heating and Cooling -->
             <li class="service-box" id="service1">
-                <strong>Heating and Cooling</strong>
-                <div class="service-info">
+    <strong class="service-name">Heating and Cooling</strong>
+    <div class="service-info">
                     <p>Our Heating and Cooling service ensures your indoor environment stays comfortable year-round.
                         We specialize in HVAC system installation, repair, and maintenance. Whether it's fixing
                         heating issues during winter or ensuring your air conditioning works efficiently in the
@@ -49,7 +49,7 @@
 
             <!-- Service 2: Plumbing -->
             <li class="service-box" id="service2">
-                <strong>Plumbing</strong>
+                <strong class="service-name">Plumbing</strong>
                 <div class="service-info">
                     <p>Experience reliable plumbing services with our team. From leaky faucets to complex pipe
                         installations, we handle it all. Our skilled plumbers are equipped to address plumbing
@@ -62,7 +62,7 @@
 
             <!-- Service 3: Ventilation -->
             <li class="service-box" id="service3">
-                <strong>Ventilation</strong>
+                <strong class="service-name">Ventilation</strong>
                 <div class="service-info">
                     <p>Optimize your indoor air quality with our ventilation services. Proper ventilation is crucial
                         for maintaining a healthy and comfortable living space. We specialize in installing,
@@ -76,7 +76,7 @@
 
             <!-- Service 4: Air Quality Control -->
             <li class="service-box" id="service4">
-                <strong>Air Quality Control</strong>
+                <strong class="service-name">Air Quality Control</strong>
                 <div class="service-info">
                     <p>Prioritize your health with our Air Quality Control services. We offer comprehensive solutions
                         to enhance the air you breathe indoors. Our team assesses air quality issues, recommends
@@ -88,7 +88,7 @@
 
             <!-- Service 5: Emergency Repairs -->
             <li class="service-box" id="service5">
-                <strong>Emergency Repairs</strong>
+               <strong class="service-name">Emergency Repairs</strong>
                 <div class="service-info">
                     <p>Count on us for prompt and reliable Emergency Repair services. We understand that certain issues
                         require immediate attention. Our emergency repair team is available 24/7 to address
@@ -100,7 +100,7 @@
 
             <!-- Service 6: Regular Maintenance -->
             <li class="service-box" id="service6">
-                <strong>Regular Maintenance</strong>
+                <strong class="service-name">Regular Maintenance</strong>
                 <div class="service-info">
                     <p>Maintain the efficiency and longevity of your home systems with our Regular Maintenance
                         services. Our proactive approach involves scheduled inspections, cleaning, and adjustments to
@@ -179,11 +179,16 @@ document.addEventListener('DOMContentLoaded', function () {
             const serviceInfo = box.querySelector('.service-info');
             serviceInfo.style.display = (box.classList.contains('expanded')) ? 'block' : 'none';
 
+            // Toggle the visibility of the service name within the clicked box
+            const serviceName = box.querySelector('.service-name');
+            serviceName.style.display = (box.classList.contains('expanded')) ? 'none' : 'block';
+
             // Collapse other service boxes
             serviceBoxes.forEach(function (otherBox) {
                 if (otherBox !== box && otherBox.classList.contains('expanded')) {
                     otherBox.classList.remove('expanded');
                     otherBox.querySelector('.service-info').style.display = 'none';
+                    otherBox.querySelector('.service-name').style.display = 'block';
                 }
             });
         });
