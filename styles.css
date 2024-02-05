@@ -1,3 +1,16 @@
+/* CSS Reset */
+body, h1, h2, h3, p, ul, ol, li, figure, figcaption, blockquote, dl, dd, dt {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
 /* Reset and global styles */
 body {
     font-family: 'Proxima Nova', Arial, sans-serif;
@@ -447,6 +460,7 @@ footer strong {
         text-align: center;
         padding: 1em;
         width: 100%; /* Ensure the footer spans the screen width */
+        box-sizing: border-box;
     }
 
     footer p {
