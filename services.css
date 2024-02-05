@@ -20,3 +20,10 @@
     display: block; /* Show the service info when expanded */
     /* Add any other styles you want to apply to the expanded content */
 }
+
+/* Desktop styles */
+@media only screen and (min-width: 769px) {
+    .service-info {
+        font-size: 16px; /* Adjust the font size for larger screens */
+    }
+}
