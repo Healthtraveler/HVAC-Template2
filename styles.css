@@ -591,9 +591,9 @@ section.services {
     padding: 2em;
     text-align: center;
 }
-     .service-box {
-        width: 100%;
-        max-width: 100%; /* Ensure the box doesn't exceed the screen width */
+      .service-box {
+        width: calc(100% - 20px); /* Adjust as needed for spacing between service containers */
+        max-width: calc(100% - 20px); /* Ensure the box doesn't exceed the screen width */
         box-sizing: border-box; /* Include padding and border in the box's total width and height */
         margin-bottom: 20px; /* Adjust as needed for spacing between service containers */
         overflow: hidden; /* Hide any content that overflows the box */
