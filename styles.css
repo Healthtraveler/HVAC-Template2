@@ -450,3 +450,71 @@ footer a {
 .footer-copyright {
     margin-top: 20px;
 }
+/* Media queries for mobile devices */
+@media only screen and (max-width: 600px) {
+    /* Adjustments for header */
+    header img {
+        max-height: 150px; /* Decrease image height */
+    }
+
+    nav a {
+        font-size: 14px; /* Decrease font size of navigation links */
+    }
+
+    /* Adjustments for services section */
+    section.services li {
+        flex: 0 0 calc(50% - 20px); /* Adjust width of service boxes for two-column layout */
+    }
+
+    /* Adjustments for contact section */
+    section.contact form input,
+    section.contact form select,
+    section.contact form textarea {
+        width: 100%; /* Set input width to 100% */
+    }
+
+    section.contact form button {
+        padding: 12px 20px; /* Adjust button padding */
+    }
+
+    /* Adjustments for appointment section */
+    section.appointment form input,
+    section.appointment form select,
+    section.appointment form textarea {
+        width: 100%; /* Set input width to 100% */
+    }
+}
+
+/* Media queries for tablet devices */
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+    /* Adjustments for header */
+    header img {
+        max-height: 200px; /* Increase image height */
+    }
+
+    nav a {
+        font-size: 16px; /* Increase font size of navigation links */
+    }
+
+    /* Adjustments for services section */
+    section.services li {
+        flex: 0 0 calc(33.33% - 20px); /* Adjust width of service boxes for three-column layout */
+    }
+}
+
+/* Media queries for desktop devices */
+@media only screen and (min-width: 1025px) {
+    /* Adjustments for header */
+    header img {
+        max-height: 250px; /* Restore default image height */
+    }
+
+    nav a {
+        font-size: 18px; /* Restore default font size of navigation links */
+    }
+
+    /* Adjustments for services section */
+    section.services li {
+        flex: 0 0 calc(25% - 20px); /* Adjust width of service boxes for four-column layout */
+    }
+}
