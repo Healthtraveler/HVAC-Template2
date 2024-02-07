@@ -1,104 +1,113 @@
-// Calendar generation and interaction logic
 const calendarContainer = document.getElementById('calendar');
 const selectedDateInput = document.getElementById('selectedDate');
-const bookedDates = ["2024-02-10", "2024-02-15", "2024-02-20"]; // Example booked dates
+const bookedDates = ['2024-02-05', '2024-02-10', '2024-02-15', '2024-02-20']; // Example of booked dates
+
+let currentDate = new Date();
+let currentYear = currentDate.getFullYear();
+let currentMonth = currentDate.getMonth();
 
 function generateCalendar(year, month) {
+    calendarContainer.innerHTML = ''; // Clear previous calendar
+
     const firstDay = new Date(year, month, 1);
     const lastDay = new Date(year, month + 1, 0);
     const daysInMonth = lastDay.getDate();
 
-    const calendar = `
-        <div class="calendar-header">
-            <button onclick="prevMonth()">←</button>
-            <h3>${new Date(year, month).toLocaleString('default', { month: 'long', year: 'numeric' })}</h3>
-            <button onclick="nextMonth()">→</button>
-        </div>
-        <table class="calendar-table">
-            <thead>
-                <tr>
-                    <th>Sun</th>
-                    <th>Mon</th>
-                    <th>Tue</th>
-                    <th>Wed</th>
-                    <th>Thu</th>
-                    <th>Fri</th>
-                    <th>Sat</th>
-                </tr>
-            </thead>
-            <tbody>
-                ${generateCalendarBody(firstDay.getDay(), daysInMonth)}
-            </tbody>
-        </table>
+    const calendarHeader = document.createElement('div');
+    calendarHeader.classList.add('calendar-header');
+    calendarHeader.innerHTML = `
+        <button id="prevMonthBtn" onclick="prevMonth()">←</button>
+        <h3>${firstDay.toLocaleString('default', { month: 'long', year: 'numeric' })}</h3>
+        <button id="nextMonthBtn" onclick="nextMonth()">→</button>
     `;
+    calendarContainer.appendChild(calendarHeader);
 
-    calendarContainer.innerHTML = calendar;
-}
+    const table = document.createElement('table');
+    table.classList.add('calendar-table');
 
-function generateCalendarBody(startDay, daysInMonth) {
-    let calendarBody = '';
-    let dayCounter = 1;
+    // Create table header
+    const thead = document.createElement('thead');
+    thead.innerHTML = `
+        <tr>
+            <th>Sun</th>
+            <th>Mon</th>
+            <th>Tue</th>
+            <th>Wed</th>
+            <th>Thu</th>
+            <th>Fri</th>
+            <th>Sat</th>
+        </tr>
+    `;
+    table.appendChild(thead);
 
+    // Create table body
+    const tbody = document.createElement('tbody');
+    let date = 1;
     for (let i = 0; i < 6; i++) {
-        let row = '<tr>';
-
+        const row = document.createElement('tr');
         for (let j = 0; j < 7; j++) {
-            if ((i === 0 && j < startDay) || dayCounter > daysInMonth) {
-                row += '<td></td>';
+            const cell = document.createElement('td');
+            if (i === 0 && j < firstDay.getDay()) {
+                cell.textContent = '';
+            } else if (date > daysInMonth) {
+                break;
             } else {
-                const date = new Date();
-                date.setHours(0, 0, 0, 0);
-                date.setDate(dayCounter);
-
-                if (date >= new Date() && !bookedDates.includes(date.toISOString().split('T')[0])) {
-                    row += `<td onclick="onDateSelected(this, '${date.toISOString().split('T')[0]}')">${dayCounter}</td>`;
+                const currentDate = new Date(year, month, date);
+                cell.textContent = date;
+                if (currentDate <= new Date() || bookedDates.includes(formatDate(currentDate))) {
+                    cell.classList.add('disabled');
                 } else {
-                    row += '<td class="booked">Booked</td>';
+                    cell.addEventListener('click', () => onDateSelected(cell, currentDate));
                 }
-
-                dayCounter++;
+                if (currentDate.getFullYear() === currentYear && currentDate.getMonth() === currentMonth && date === currentDate.getDate()) {
+                    cell.classList.add('current-date');
+                }
+                date++;
             }
+            row.appendChild(cell);
         }
-
-        row += '</tr>';
-        calendarBody += row;
+        tbody.appendChild(row);
     }
-
-    return calendarBody;
+    table.appendChild(tbody);
+    calendarContainer.appendChild(table);
 }
 
 function prevMonth() {
-    const currentDate = new Date();
-    currentDate.setMonth(currentDate.getMonth() - 1);
-    generateCalendar(currentDate.getFullYear(), currentDate.getMonth());
+    if (currentMonth === 0) {
+        if (currentYear > new Date().getFullYear()) {
+            currentYear--;
+            currentMonth = 11;
+            generateCalendar(currentYear, currentMonth);
+        }
+    } else {
+        currentMonth--;
+        generateCalendar(currentYear, currentMonth);
+    }
 }
 
 function nextMonth() {
-    const currentDate = new Date();
-    currentDate.setMonth(currentDate.getMonth() + 1);
-    generateCalendar(currentDate.getFullYear(), currentDate.getMonth());
+    if (currentMonth === 11) {
+        currentYear++;
+        currentMonth = 0;
+        generateCalendar(currentYear, currentMonth);
+    } else {
+        currentMonth++;
+        generateCalendar(currentYear, currentMonth);
+    }
 }
 
 function onDateSelected(cell, date) {
-    // Remove highlight from previously selected date
     const previouslySelected = document.querySelector('.selected');
     if (previouslySelected) {
         previouslySelected.classList.remove('selected');
     }
-
-    // Set the selected date to the hidden input field
     selectedDateInput.value = formatDate(date);
-
-    // Highlight the selected date
     cell.classList.add('selected');
 }
 
-function formatDate(dateString) {
-    const options = { year: 'numeric', month: 'long', day: 'numeric' };
-    const formattedDate = new Date(dateString).toLocaleDateString(undefined, options);
-    return formattedDate;
+function formatDate(date) {
+    return date.toISOString().split('T')[0];
 }
 
 // Initial calendar generation
-const currentDate = new Date();
-generateCalendar(currentDate.getFullYear(), currentDate.getMonth());
+generateCalendar(currentYear, currentMonth);

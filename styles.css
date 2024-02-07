@@ -17,19 +17,19 @@ body {
     font-family: 'Proxima Nova', Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background-color: #ffffff;
 }
 
 /* Header styles */
 header {
-    background-color: rgba(51, 51, 51, 0.9);
-    color: #fff;
+    background-color: rgba(255, 255, 255, 0.9);
+    color: #ffffff;
     text-align: center;
     padding: 1em;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.2);
 }
 
 header img {
@@ -46,7 +46,7 @@ nav {
 }
 
 nav a {
-    color: #fff;
+    color: #000000;
     text-decoration: none;
     margin: 0 15px;
     font-size: 18px;
@@ -55,7 +55,7 @@ nav a {
 }
 
 nav a:hover {
-    color: #ecf0f1;
+    color: #7ecbff;
 }
 
 /* 3D effect for navigation links */
@@ -67,7 +67,7 @@ nav a::before {
     height: 3px;
     bottom: -6px;
     left: 0;
-    background: #3498db;
+    background: #7ecbff;
     transform: scaleX(0);
     transform-origin: right;
     transition: transform 0.3s ease-in-out;
@@ -89,7 +89,7 @@ nav a:hover::before {
 }
 
 .menu-items a {
-    color: #fff;
+    color: #000000;
     text-decoration: none;
     margin: 0 60px;
     font-size: 20px;
@@ -97,7 +97,7 @@ nav a:hover::before {
 }
 
 .menu-items a:hover {
-    color: #3498db;
+    color: #7ecbff;
 }
 
 .menu-icon {
@@ -114,8 +114,9 @@ section.hero {
     color: #fff;
     text-align: center;
     box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.4);
+    background-size: contain; /* Adjust the property based on your preference */
+    overflow: hidden; /* hide if image is overflowing into other spaces */
 }
-
 /* Services section styles */
 section.services {
     padding: 2em;
@@ -192,7 +193,7 @@ section.contact h2 {
 
 /* Contact form styles */
 section.contact form {
-    max-width: 600px;
+    max-width: 100%;
     margin: 0 auto;
     background-color: #fff;
     padding: 20px;
@@ -213,15 +214,6 @@ section.contact form textarea {
     margin-bottom: 15px; /* Add margin between inputs */
 }
 
-/* Add a media query for screens above 768px (typical desktop devices) */
-@media only screen and (min-width: 769px) {
-    section.contact form input[type="text"],
-    section.contact form input[type="email"],
-    section.contact form input[type="tel"],
-    section.contact form textarea {
-        width: 50%; /* Set input width to 50% for desktop */
-    }
-    
 section.contact form:hover {
     transform: translateY(-5px);
 }
@@ -335,17 +327,23 @@ section.appointment form button {
     cursor: pointer;
 }
 
-/* Calendar styles */
 .calendar-container {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
-    margin-top: 20px;
+    gap: 20px;
+    overflow: hidden; /* Ensure that contents are contained within the container */
+}
+
+.calendar-month {
+    width: calc(25% - 20px); /* Adjust width as needed */
+    margin-bottom: 20px;
+    max-width: 200px; /* Limit the width of each month */
 }
 
 .calendar {
-    width: 100%;
+    width: 50%;
     box-sizing: border-box;
-    max-width: 600px;
     border: 1px solid #ccc;
     border-radius: 8px;
     overflow: hidden;
@@ -409,8 +407,8 @@ section.appointment form button {
 }
 
 .calendar-table td.selected {
-    background-color: #3498db;
-    color: #fff;
+    background-color: #ffffff;
+    color: #808080;
     font-weight: bold;
 }
 
@@ -420,19 +418,35 @@ section.appointment form button {
     font-size: 120%;
 }
 
-/* Footer styles */
+#thankYouMessage {
+    display: none;
+}
+
+/* Footer Styles */
 footer {
-    background-color: #333;
-    color: #fff;
+    background-color: #333333; /* Dark gray background */
+    color: #ffffff; /* White text color */
+    padding: 20px;
     text-align: center;
-    padding: 1em;
 }
 
-footer p {
-    margin: 0;
+footer a {
+    color: #ffffff; /* text color for footer links */
 }
 
-footer strong {
-    color: #fff;
-    display: block;
+.footer-social-icons i {
+    color: #ffffff; /* visible text color for social icons */
+}
+
+.footer-links {
+    margin-top: 20px;
+}
+
+.footer-links a {
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+.footer-copyright {
+    margin-top: 20px;
 }

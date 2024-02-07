@@ -11,12 +11,12 @@
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="services.css">
-    <link rel="stylesheet" href="mobile.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
 <body>
 
     <header>
-        <img src="Landing Page Images/EriksHVAC.png" alt="Erik's HVAC & Maintenance">
+        <img src="Landing Page Images/EriksHVAC (2).png" alt="Erik's HVAC & Maintenance">
         <nav>
             <div id="menuIcon" class="menu-icon">&#9776;</div>
             <div id="menuItems" class="menu-items">
@@ -28,7 +28,7 @@
     </header>
 
     <section class="hero">
-        <h1>General maintenance for $125 & free consultations. EPA Certified and quality gauranteed</h1>
+        <img src="Landing Page Images/HeroImage1.png" alt="Hero Image">
     </section>
 
    <section class="services">
@@ -159,87 +159,19 @@
     </div>
     </section>
 
-   <footer>
-    <p>Contact us at <strong>erikshvac@gmail.com</strong> or call <strong>(555) 123-4567</strong></p>
-</footer>
+    <footer>
+        <p>Contact us at <strong><a href="mailto:erikshvac@gmail.com">erikshvac@gmail.com</a></strong> or call <strong><a href="tel:+12095344730">(209)534-4730</a></strong></p>
+        <p>Privacy Policy | <a href="#social-media"><img src="social_media_icons.png" alt="Social Media Icons"></a></p>
+        <p>&copy; 2024 Erik's HVAC and Maintenace. All rights reserved.</p>
+    </footer>    
 
     <script src="lazyload.js"></script>
     <script src="calendar.js"></script> <!-- Calendar Script -->
     <script src="time.js"></script>
     <script src="your-form-validation-script.js"></script>
- <script>
-document.addEventListener('DOMContentLoaded', function () {
-    const serviceBoxes = document.querySelectorAll('.service-box');
-    let inactivityTimer;
-
-    function hideServiceInfo(box) {
-        box.classList.remove('expanded');
-        box.querySelector('.service-info').style.display = 'none';
-        box.querySelector('.service-name').style.display = 'block';
-    }
-
-    function handleUserActivity() {
-        // Clear the existing inactivity timer
-        clearTimeout(inactivityTimer);
-
-        // Set a timer to automatically hide the service info after 5 seconds of inactivity
-        inactivityTimer = setTimeout(function () {
-            serviceBoxes.forEach(function (box) {
-                hideServiceInfo(box);
-            });
-        }, 5000);
-    }
-
-    serviceBoxes.forEach(function (box) {
-        box.addEventListener('click', function (event) {
-            // Toggle the expanded class on the clicked service box
-            box.classList.toggle('expanded');
-
-            // Toggle the visibility of the service info within the clicked box
-            const serviceInfo = box.querySelector('.service-info');
-            serviceInfo.style.display = (box.classList.contains('expanded')) ? 'block' : 'none';
-
-            // Toggle the visibility of the service name within the clicked box
-            const serviceName = box.querySelector('.service-name');
-            serviceName.style.display = (box.classList.contains('expanded')) ? 'none' : 'block';
-
-            // Collapse other service boxes
-            serviceBoxes.forEach(function (otherBox) {
-                if (otherBox !== box && otherBox.classList.contains('expanded')) {
-                    hideServiceInfo(otherBox);
-                }
-            });
-
-            // Handle user activity after a click
-            handleUserActivity();
-        });
-    });
-
-    // Event listener for clicks anywhere on the document
-    document.addEventListener('click', function (event) {
-        // Hide service info when clicking outside of service boxes
-        if (!event.target.closest('.service-box')) {
-            serviceBoxes.forEach(function (box) {
-                hideServiceInfo(box);
-            });
-        }
-
-        // Handle user activity after a click
-        handleUserActivity();
-    });
-
-    // Event listener for scroll events on the document
-    document.addEventListener('scroll', function () {
-        // Hide service info when scrolling
-        serviceBoxes.forEach(function (box) {
-            hideServiceInfo(box);
-        });
-
-        // Handle user activity after a scroll
-        handleUserActivity();
-    });
-});
-</script>
+    <script src="service-boxes.js"></script>
+    <script src="sizing.js"></script>
+    <script src="date-selected.js"></script>
     
 </body>
 </html>
