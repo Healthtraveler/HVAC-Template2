@@ -458,7 +458,7 @@ footer a {
 }
 
 /* Mobile devices (up to 767px) */
-@media only screen and (min-width: 320px) and (max-width: 767px) {
+@media only screen and (min-width: 300px) and (max-width: 767px) {
     .container {
         max-width: 100%;
     }
@@ -527,4 +527,3 @@ footer a {
     .calendar-table td {
         width: calc(100% / 7); /* Distribute width evenly for each day */
     }
-}
