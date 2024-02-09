@@ -1,175 +1,285 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="EPA Certified service man that provides general maintenance of HVAC services including repair; as well as residential handyman services.">
-    <meta name="keywords" content="HVAC, Heating, Cooling, Plumbing, Ventilation, Air Quality">
-    <meta name="author" content="Erik Pulido">
-    <title>Erik's HVAC & Maintenance</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Proxima+Nova:wght@400;700&display=swap">
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="services.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HVAC Services</title>
+<link rel="stylesheet" href="styles.css">
+
+<!-- Include jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<style>
+/* CSS for modern and futuristic design */
+body {
+    background-color: #f2f2f2; /* Light gray background */
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color: #ffffff; /* White header background */
+    padding: 20px;
+}
+
+header nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+header nav ul li {
+    float: left;
+}
+
+header nav ul li a {
+    display: block;
+    color: #333333; /* Dark gray text */
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+header nav ul li a:hover {
+    background-color: #dddddd; /* Light gray hover background */
+    color: #000000; /* Black text */
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.service {
+    background-color: #ffffff; /* White background for service container */
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Shadow effect */
+    transition: transform 0.3s ease; /* Smooth transition */
+    cursor: pointer; /* Cursor pointer for interaction */
+}
+
+.service h3 {
+    margin-top: 0;
+}
+
+.service .description {
+    display: none; /* Hide description initially */
+}
+
+.service.clicked .name {
+    display: none; /* Hide name when service is clicked */
+}
+
+.service.clicked .description {
+    display: block; /* Show description when service is clicked */
+}
+
+.hero {
+    background-image: url('Landing Page Images/HeroImage1.png'); /* Hero image */
+    background-size: cover; /* Cover the entire container */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Prevent image from repeating */
+    height: 80vh; /* Set initial height */
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.hero .contact-button {
+    background-color: #007bff; /* Blue button background */
+    color: #ffffff; /* White text */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    margin: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.hero .contact-button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+.contact-form {
+    margin-top: 50px;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form input[type="tel"],
+.contact-form input[type="datetime-local"],
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.contact-form input[type="submit"] {
+    background-color: #007bff; /* Blue button background */
+    color: #ffffff; /* White text */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form input[type="submit"]:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+</style>
+
 </head>
 <body>
 
-    <header>
-        <img src="Landing Page Images/EriksHVAC (2).png" alt="Erik's HVAC & Maintenance">
-        <nav>
-            <div id="menuIcon" class="menu-icon">&#9776;</div>
-            <div id="menuItems" class="menu-items">
-                <a href="index.html">Home</a>
-                <a href="Gallery.html">Gallery</a>
-                <a href="FAQ.html">FAQ</a>
-            </div>
-        </nav>
-    </header>
-
-    <section class="hero">
-        <img src="Landing Page Images/HeroImage1.png" alt="Hero Image">
-    </section>
-
-   <section class="services">
-        <h2>Our Services</h2>
-        <ul>
-            <!-- Service 1: Heating and Cooling -->
-            <li class="service-box" id="service1">
-    <strong class="service-name">Heating and Cooling</strong>
-    <div class="service-info">
-                    <p>Our Heating and Cooling service ensures your indoor environment stays comfortable year-round.
-                        We specialize in HVAC system installation, repair, and maintenance. Whether it's fixing
-                        heating issues during winter or ensuring your air conditioning works efficiently in the
-                        summer, we've got you covered.</p>
-                    <p>Our certified technicians use state-of-the-art equipment to diagnose and address HVAC problems
-                        promptly. We prioritize energy efficiency and cost-effectiveness, providing solutions that
-                        enhance your home's overall comfort.</p>
-                </div>
-            </li>
-
-            <!-- Service 2: Plumbing -->
-            <li class="service-box" id="service2">
-                <strong class="service-name">Plumbing</strong>
-                <div class="service-info">
-                    <p>Experience reliable plumbing services with our team. From leaky faucets to complex pipe
-                        installations, we handle it all. Our skilled plumbers are equipped to address plumbing
-                        emergencies and routine maintenance alike.</p>
-                    <p>We prioritize quality workmanship and use durable materials to ensure long-lasting results.
-                        Whether it's a clogged drain, burst pipe, or plumbing fixture installation, trust us for
-                        efficient and effective solutions.</p>
-                </div>
-            </li>
-
-            <!-- Service 3: Ventilation -->
-            <li class="service-box" id="service3">
-                <strong class="service-name">Ventilation</strong>
-                <div class="service-info">
-                    <p>Optimize your indoor air quality with our ventilation services. Proper ventilation is crucial
-                        for maintaining a healthy and comfortable living space. We specialize in installing,
-                        repairing, and maintaining ventilation systems to ensure fresh and clean air throughout
-                        your home.</p>
-                    <p>Our team assesses your ventilation needs and provides tailored solutions for improved air
-                        circulation. Breathe easy with our ventilation services designed to enhance your overall
-                        well-being.</p>
-                </div>
-            </li>
-
-            <!-- Service 4: Air Quality Control -->
-            <li class="service-box" id="service4">
-                <strong class="service-name">Air Quality Control</strong>
-                <div class="service-info">
-                    <p>Prioritize your health with our Air Quality Control services. We offer comprehensive solutions
-                        to enhance the air you breathe indoors. Our team assesses air quality issues, recommends
-                        improvements, and installs advanced air purification systems.</p>
-                    <p>Whether you're dealing with allergens, pollutants, or humidity concerns, we provide
-                        state-of-the-art solutions to create a healthier living environment for you and your family.</p>
-                </div>
-            </li>
-
-            <!-- Service 5: Emergency Repairs -->
-            <li class="service-box" id="service5">
-               <strong class="service-name">Emergency Repairs</strong>
-                <div class="service-info">
-                    <p>Count on us for prompt and reliable Emergency Repair services. We understand that certain issues
-                        require immediate attention. Our emergency repair team is available 24/7 to address
-                        unexpected HVAC, plumbing, or ventilation issues.</p>
-                    <p>Whether it's a sudden breakdown, leak, or airflow problem, we respond swiftly to restore
-                        functionality and comfort in your home. Your safety and well-being are our top priorities.</p>
-                </div>
-            </li>
-
-            <!-- Service 6: Regular Maintenance -->
-            <li class="service-box" id="service6">
-                <strong class="service-name">Regular Maintenance</strong>
-                <div class="service-info">
-                    <p>Maintain the efficiency and longevity of your home systems with our Regular Maintenance
-                        services. Our proactive approach involves scheduled inspections, cleaning, and adjustments to
-                        prevent potential issues.</p>
-                    <p>Regular maintenance not only ensures optimal performance but also helps you avoid costly
-                        repairs in the long run. Trust us to keep your HVAC, plumbing, and ventilation systems in
-                        top-notch condition.</p>
-                </div>
-            </li>
-        </ul>
-    </section>
-
-    <section class="contact">
-        <h2>Contact Us</h2>
-        <form action="https://formspree.io/f/xzbnegly" method="post">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required>
-
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-
-            <label for="phone">Phone:</label>
-            <input type="tel" id="phone" name="phone" required>
-
-            <label for="message">Message:</label>
-            <textarea id="message" name="message" rows="4" required></textarea>
-
-            <h3>Your Availability</h3>
-
-            <div class="calendar-container">
-                <div class="calendar" id="calendar"></div>
-            </div>
-            <input type="hidden" id="selectedDate" name="selectedDate">
-            <label for="preferred-time">Preferred Time:</label>
-            <select id="preferred-time" name="preferred-time" required>
-                <option value="07:00 AM">07:00 AM</option>
-                <option value="08:00 AM">08:00 AM</option>
-                <option value="09:00 AM">09:00 AM</option>
-                <option value="10:00 AM">10:00 AM</option>
-                <option value="11:00 AM">11:00 AM</option>
-                <option value="12:00 PM">12:00 PM</option>
-                <option value="01:00 PM">01:00 PM</option>
-                <option value="02:00 PM">02:00 PM</option>
-                <option value="03:00 PM">03:00 PM</option>
-                <option value="04:00 PM">04:00 PM</option>
-                <option value="05:00 PM">05:00 PM</option>
-                <option value="06:00 PM">06:00 PM</option>
-            </select>
-
-            <button type="submit">Submit</button>
-        </form>
-         <!-- Thank you message (initially hidden) -->
-         <div id="thankYouMessage" style="display: none;">
-            <p>Thank you for your submission! We will respond and book an appointment as soon as possible!</p>
+<header>
+    <div class="logo">
+        <img src="Landing Page Images/EriksHVAC (2).png" alt="HVAC Services Logo">
     </div>
-    </section>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="Gallery.html">Gallery</a></li>
+            <li><a href="FAQ.html">FAQ</a></li>
+        </ul>
+    </nav>
+</header>
 
-    <footer>
-        <p>Contact us at <strong><a href="mailto:erikshvac@gmail.com">erikshvac@gmail.com</a></strong> or call <strong><a href="tel:+12095344730">(209)534-4730</a></strong></p>
-        <p>Privacy Policy | <a href="#social-media"><img src="social_media_icons.png" alt="Social Media Icons"></a></p>
-        <p>&copy; 2024 Erik's HVAC and Maintenace. All rights reserved.</p>
-    </footer>    
+<section id="home" class="hero">
+    <div class="container">
+        <h1>Welcome to HVAC Services</h1>
+        <p>Your trusted partner for all your heating, ventilation, and air conditioning needs.</p>
+        <button class="contact-button" onclick="window.location.href='mailto:erikshvac@gmail.com';">Email Us</button>
+        <button class="contact-button" onclick="window.location.href='tel:1234567890';">Call Us</button>
+    </div>
+</section>
 
-    <script src="lazyload.js"></script>
-    <script src="calendar.js"></script> <!-- Calendar Script -->
-    <script src="time.js"></script>
-    <script src="your-form-validation-script.js"></script>
-    <script src="service-boxes.js"></script>
-    <script src="sizing.js"></script>
-    
-</body>
-</html>
+<section id="services">
+    <div class="container">
+        <h2>Our Services</h2>
+        <div class="service" onclick="toggleService(this)">
+            <div class="name">
+                <h3>Heating System Installation</h3>
+            </div>
+            <div class="description">
+                <p>We offer professional installation of heating systems for residential and commercial properties.</p>
+            </div>
+        </div>
+        <div class="service" onclick="toggleService(this)">
+            <div class="name">
+                <h3>AC Repair and Maintenance</h3>
+            </div>
+            <div class="description">
+                <p>Need your air conditioning system repaired or maintained? We've got you covered.</p>
+            </div>
+        </div>
+        <div class="service" onclick="toggleService(this)">
+            <div class="name">
+                <h3>Ventilation System Installation</h3>
+            </div>
+            <div class="description">
+                <p>Professional installation of ventilation systems to ensure optimal air quality in your space.</p>
+            </div>
+        </div>
+        <div class="service" onclick="toggleService(this)">
+            <div class="name">
+                <h3>Plumbing Services</h3>
+            </div>
+            <div class="description">
+                <p>Comprehensive plumbing services for both residential and commercial properties.</p>
+            </div>
+        </div>
+        <div class="service" onclick="toggleService(this)">
+            <div class="name">
+                <h3>Indoor Air Quality Assessment</h3>
+            </div>
+            <div class="description">
+                <p>Assessment and improvement of indoor air quality for healthier living and working environments.</p>
+            </div>
+        </div>
+        <div class="service" onclick="toggleService(this)">
+            <div class="name">
+                <h3>Emergency HVAC Repairs</h3>
+            </div>
+            <div class="description">
+                <p>24/7 emergency repair services for HVAC systems to restore comfort and safety in your property.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="about">
+    <div class="container">
+        <h2>About Us</h2>
+        <p>Learn more about our company and our commitment to providing top-notch HVAC services.</p>
+    </div>
+</section>
+
+<section id="contact">
+    <div class="container">
+        <h2>Contact Us</h2>
+        <div class="contact-form">
+            <form id="emailForm">
+                <input type="text" name="name" placeholder="Your Name" required><br>
+                <input type="email" name="email" placeholder="Your Email" required><br>
+                <input type="tel" name="phone" placeholder="Your Phone Number" required><br>
+                <input type="datetime-local" name="preferredTime" required><br>
+                <textarea name="message" placeholder="Your Message" rows="4" required></textarea><br>
+                <input type="submit" value="Send Message" class="center-button">
+            </form>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="container">
+        <p>&copy; 2024 HVAC Services. All rights reserved.</p>
+    </div>
+</footer>
+
+<!-- Add any additional scripts for custom jQuery functionality -->
+<script src="custom.js"></script>
+
+<script>
+// jQuery for handling contact form submission
+$(document).ready(function(){
+                      $("#emailForm").submit(function(event){
+                          event.preventDefault();
+                          var formData = {
+                              name: $("input[name='name']").val(),
+                              email: $("input[name='email']").val(),
+                              phone: $("input[name='phone']").val(),
+                              preferredTime: $("input[name='preferredTime']").val(),
+                              message: $("textarea[name='message']").val()
+                          };
+                          $.ajax({
+                              type: "POST",
+                              url: "mailto:erikshvac@gmail.com",
+                              data: formData,
+                              success: function(response){
+                                  alert("Your message has been sent successfully!");
+                              },
+                              error: function(response){
+                                  alert("An error occurred. Please try again later.");
+                              }
+                          });
+                      });
+                  });
+
+                  // Function to toggle service description
+                  function toggleService(element) {
+                      $(element).toggleClass('clicked');
+                  }
+                  </script>
+
+                  </body>
+                  </html>
