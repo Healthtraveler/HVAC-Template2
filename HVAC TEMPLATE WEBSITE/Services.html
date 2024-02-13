@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services Page</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Font Awesome icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap">
+    <style>
+        body {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: normal; /* Regular weight */
+}
+         /* Custom CSS for header and footer gradient background */
+         header, footer {
+            background: linear-gradient(to right, #ffffff, #f8fdff); /* Gradient background light blue */
+            color: #000000; /* Text color */
+            padding: 20px;
+        }
+
+/* Navigation menu customizations */
+.navbar-brand {
+    color: rgba(255, 255, 255, 0); /* Transparent white for logo */
+}
+
+.navbar-nav .nav-link {
+    color: rgba(255, 255, 255, 0.8); /* Transparent white for navigation items */
+}
+
+.navbar-nav .nav-link:hover {
+    color: #fff; /* White color on hover */
+}
+/* Desktop and Tablet Font Size */
+@media (min-width: 768px) {
+    .navbar-nav .nav-link {
+        font-size: 24px; /* Adjust font size for desktop and tablet */
+    }
+}
+
+@media (max-width: 991.98px) {
+    .navbar-collapse {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(255, 255, 255, 0.9); /* Adjust transparency as needed */
+        z-index: 1000; /* Ensure the menu appears above other content */
+        display: none; /* Initially hide the menu */
+    }
+    .navbar-collapse.show {
+        display: block; /* Show the menu when toggled */
+    }
+}
+@media (max-width: 991.98px) {
+    .navbar-nav .nav-link {
+        font-size: 24px; /* Adjust the font size as needed */
+        display: flex;
+        align-items: center; /* Center vertically */
+        justify-content: center; /* Center horizontally */
+    }
+
+    .navbar-nav .nav-link:hover {
+        color: #fff; /* White color on hover */
+    }
+}
+ /* Align the text to the left on larger screens, this is CSS for footer section */
+ @media (min-width: 768px) {
+    .text-center {
+        display: flex;
+        justify-content: flex-start;
+    }
+    .container-fluid.text-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+}
+        @media (max-width: 767px) {
+    /* Center the footer content vertically and horizontally */
+    footer .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* Center the "Contact Information" section in the footer */
+    footer .container h4 {
+        text-align: center;
+    }
+
+    /* Center the "Phone:" and "Email:" text */
+    .text-center {
+        text-align: center;
+    }
+
+    /* Center the text in the Follow Us section */
+    footer .follow-us {
+        text-align: center;
+    }
+
+    /* Center social media icons */
+    footer .social-media {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+        /* Align Follow Us to right in footer */
+        .follow-us {
+    text-align: right;
+}
+
+/* Align social media links to right */
+.social-media {
+    margin-left: auto;
+}
+
+/* Footer padding */
+footer {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+    </style>
+</head>
+<body>
+
+    <header>
+        <!-- Navigation menu and logo -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-transparent">
+            <div class="container">
+                <!-- Toggle button for small screens -->
+                <button class="navbar-toggler order-lg-0" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <!-- Logo -->
+                <a class="navbar-brand" href="#">
+                    <img src="Landing Page Images/LOGO2.png" alt="Your Logo" class="logo">
+                </a>
+                <!-- Navigation links -->
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="Gallery.html">Gallery</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="Services.html">Services</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="FAQ.html">FAQ</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+<!-- Services section -->
+<section id="services" class="text-center py-5">
+    <div class="container">
+        <h2>Our Services</h2>
+        <div class="row mt-4">
+            <!-- Service 1: Heating System Installation -->
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 shadow">
+                    <div class="card-body">
+                        <h5 class="card-title">Heating System Installation</h5>
+                        <p class="card-text">Professional installation of heating systems for residential and commercial properties.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Service 2: AC Repair and Maintenance -->
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 shadow">
+                    <div class="card-body">
+                        <h5 class="card-title">AC Repair and Maintenance</h5>
+                        <p class="card-text">Need your air conditioning system repaired or maintained? We've got you covered.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Service 3: Ventilation System Installation -->
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 shadow">
+                    <div class="card-body">
+                        <h5 class="card-title">Ventilation System Installation</h5>
+                        <p class="card-text">Professional installation of ventilation systems to ensure optimal air quality in your space.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Service 4: Plumbing Services -->
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 shadow">
+                    <div class="card-body">
+                        <h5 class="card-title">Plumbing Services</h5>
+                        <p class="card-text">Comprehensive plumbing services for both residential and commercial properties.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Service 5: Indoor Air Quality Assessment -->
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 shadow">
+                    <div class="card-body">
+                        <h5 class="card-title">Indoor Air Quality Assessment</h5>
+                        <p class="card-text">Assessment and improvement of indoor air quality for healthier living and working environments.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Service 6: Emergency HVAC Repairs -->
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 shadow">
+                    <div class="card-body">
+                        <h5 class="card-title">Emergency HVAC Repairs</h5>
+                        <p class="card-text">24/7 emergency repair services for HVAC systems to restore comfort and safety in your property.</p>
+                    </div>
+                </div>
+            </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="card h-100 shadow">
+                            <div class="card-body">
+                                <h5 class="card-title">TV Mounting</h5>
+                                <p class="card-text">Secure and professional mounting of televisions for a sleek and stylish entertainment setup.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="card h-100 shadow">
+                            <div class="card-body">
+                                <h5 class="card-title">Outlet and Light Fixture Installation</h5>
+                                <p class="card-text">Installation of electrical outlets and light fixtures to enhance the functionality and aesthetics of your space.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="card h-100 shadow">
+                            <div class="card-body">
+                                <h5 class="card-title">Room Fan Installation</h5>
+                                <p class="card-text">Installation of ceiling or room fans to improve air circulation and comfort in your home.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="card h-100 shadow">
+                            <div class="card-body">
+                                <h5 class="card-title">Toilet Installation</h5>
+                                <p class="card-text">Professional installation of toilets to ensure proper functionality and water efficiency.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="card h-100 shadow">
+                            <div class="card-body">
+                                <h5 class="card-title">Pipe Repair</h5>
+                                <p class="card-text">Expert repair of leaking or damaged pipes to prevent water damage and ensure efficient plumbing.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="card h-100 shadow">
+                            <div class="card-body">
+                                <h5 class="card-title">Drain Cleaning</h5>
+                                <p class="card-text">Thorough cleaning of drains to remove clogs and maintain proper drainage in your home.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+    <footer>
+        <!-- Contact information -->
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h4>Contact Information</h4>
+                    <div class="text-center">
+                        <p>
+                            <strong>Phone:</strong> <a href="tel:+12095344730">(209) 534-4730</a><br>
+                            <strong>Email:</strong> <a href="mailto:erikshvac@gmail.com">erikshvac@gmail.com</a>
+                        </p>
+                    </div>
+                </div>
+                <!-- Social media icons -->
+                <div class="col-md-6 follow-us">
+                    <h4>Follow Us</h4>
+                    <ul class="list-inline social-media">
+                        <li class="list-inline-item"><a href="#"><i class="fab fa-facebook"></i></a></li>
+                        <li class="list-inline-item"><a href="#"><i class="fab fa-twitter"></i></a></li>
+                        <li class="list-inline-item"><a href="#"><i class="fab fa-instagram"></i></a></li>
+                        <!-- Add more social media icons as needed -->
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid text-center">
+            <p>&copy; EriksHVAC and Maintenance 2024</p>
+        </div>
+    </footer>
+
+    <!-- jQuery, Popper.js, Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            // Function to center the logo on smaller screens
+            function centerLogoOnSmallScreens() {
+                if ($(window).width() <= 991.98) { // Check if screen width is less than or equal to 991.98 pixels
+                    $('.navbar-brand').addClass('text-center'); // Add Bootstrap utility class to center the text
+                } else {
+                    $('.navbar-brand').removeClass('text-center'); // Remove Bootstrap utility class
+                }
+            }
+    
+            // Function to adjust logo size
+            function adjustLogoSize() {
+                var windowWidth = $(window).width();
+                var logo = $('.logo');
+    
+                if (windowWidth < 992) {
+                    // Small screen size
+                    logo.css('width', '100px'); // Adjust width as needed
+                } else {
+                    // Larger screen size
+                    logo.css('width', '250px'); // Reset width
+                }
+            }
+    
+            // Call the functions on page load
+            centerLogoOnSmallScreens();
+            adjustLogoSize();
+    
+            // Call the functions whenever the window is resized
+            $(window).resize(function() {
+                centerLogoOnSmallScreens();
+                adjustLogoSize();
+            });
+        });
+    </script>
+</body>
+</html>
