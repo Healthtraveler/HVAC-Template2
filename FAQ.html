@@ -99,34 +99,63 @@ section.faq dd {
     color: #666; /* Color for answers */
 }
 
-  /* Align the text to the left on larger screens, this is CSS for footer section */
-  @media (min-width: 768px) {
-            .text-center {
-                display: flex;
-                justify-content: flex-start;
-            }
-            .container-fluid.text-center {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-            }
-        }
+   /* Align the text to the left on larger screens, this is CSS for footer section */
+@media (min-width: 768px) {
+    .text-center {
+        display: flex;
+        justify-content: flex-start;
+    }
+    .container-fluid.text-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+}
+        @media (max-width: 767px) {
+    /* Center the footer content vertically and horizontally */
+    footer .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* Center the "Contact Information" section in the footer */
+    footer .container h4 {
+        text-align: center;
+    }
+
+    /* Center the "Phone:" and "Email:" text */
+    .text-center {
+        text-align: center;
+    }
+
+    /* Center the text in the Follow Us section */
+    footer .follow-us {
+        text-align: center;
+    }
+
+    /* Center social media icons */
+    footer .social-media {
+        display: flex;
+        justify-content: center;
+    }
+}
 
         /* Align Follow Us to right in footer */
         .follow-us {
-            text-align: right;
-        }
+    text-align: right;
+}
 
-        /* Align social media links to right */
-        .social-media {
-            margin-left: auto;
-        }
+/* Align social media links to right */
+.social-media {
+    margin-left: auto;
+}
 
-        /* Footer padding */
-        footer {
-            padding-top: 20px;
-            padding-bottom: 20px;
-        }
+/* Footer padding */
+footer {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
     </style>
 </head>
 <body>
