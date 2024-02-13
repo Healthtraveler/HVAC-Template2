@@ -508,30 +508,33 @@ footer {
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 <script>
     // jQuery for handling contact form submission
-$(document).ready(function(){
-                      $("#emailForm").submit(function(event){
-                          event.preventDefault();
-                          var formData = {
-                              name: $("input[name='name']").val(),
-                              email: $("input[name='email']").val(),
-                              phone: $("input[name='phone']").val(),
-                              preferredTime: $("input[name='preferredTime']").val(),
-                              message: $("textarea[name='message']").val()
-                          };
-                          $.ajax({
-                              type: "POST",
-                              url: "mailto:erikshvac@gmail.com",
-                              data: formData,
-                              success: function(response){
-                                  alert("Your message has been sent successfully!");
-                              },
-                              error: function(response){
-                                  alert("An error occurred. Please try again later.");
-                              }
-                          });
-                      });
-                  });
-                </script>
+    $(document).ready(function(){
+        $("#emailForm").submit(function(event){
+            event.preventDefault();
+            var formData = {
+                name: $("input[name='name']").val(),
+                email: $("input[name='email']").val(),
+                phone: $("input[name='phone']").val(),
+                preferredTime: $("input[name='preferredTime']").val(),
+                message: $("textarea[name='message']").val()
+            };
+            $.ajax({
+                type: "POST",
+                url: "https://formspree.io/f/xzbnegly",
+                data: formData,
+                dataType: "json",
+                success: function(response){
+                    alert("Your message has been sent successfully!");
+                    // Optionally, you can redirect to a thank you page
+                    window.location.href = "thank-you.html";
+                },
+                error: function(response){
+                    alert("An error occurred. Please try again later.");
+                }
+            });
+        });
+    });
+</script>
 
                  <script>
 
