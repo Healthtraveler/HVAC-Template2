@@ -7,63 +7,11 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap">
+    <link rel="stylesheet" href="headerfooter.css">
     <style>
      body {
     font-family: 'Montserrat', sans-serif;
     font-weight: normal; /* Regular weight */
-}
-
-        header, footer {
-            background: linear-gradient(to right, #ffffff, #f8fdff); /* Gradient background light blue */
-            color: #000000; /* Text color */
-            padding: 20px;
-        }
-
-        /* Navigation menu customizations */
-.navbar-brand {
-    color: rgba(255, 255, 255, 0); /* Transparent white for logo */
-}
-
-.navbar-nav .nav-link {
-    color: rgba(255, 255, 255, 0.8); /* Transparent white for navigation items */
-}
-
-.navbar-nav .nav-link:hover {
-    color: #fff; /* White color on hover */
-}
-/* Desktop and Tablet Font Size */
-@media (min-width: 768px) {
-    .navbar-nav .nav-link {
-        font-size: 24px; /* Adjust font size for desktop and tablet */
-    }
-}
-
-@media (max-width: 991.98px) {
-    .navbar-collapse {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(255, 255, 255, 0.9); /* Adjust transparency as needed */
-        z-index: 1000; /* Ensure the menu appears above other content */
-        display: none; /* Initially hide the menu */
-    }
-    .navbar-collapse.show {
-        display: block; /* Show the menu when toggled */
-    }
-}
-@media (max-width: 991.98px) {
-    .navbar-nav .nav-link {
-        font-size: 24px; /* Adjust the font size as needed */
-        display: flex;
-        align-items: center; /* Center vertically */
-        justify-content: center; /* Center horizontally */
-    }
-
-    .navbar-nav .nav-link:hover {
-        color: #fff; /* White color on hover */
-    }
 }
         section.faq {
     padding: 2em;
@@ -99,63 +47,6 @@ section.faq dd {
     color: #666; /* Color for answers */
 }
 
-   /* Align the text to the left on larger screens, this is CSS for footer section */
-@media (min-width: 768px) {
-    .text-center {
-        display: flex;
-        justify-content: flex-start;
-    }
-    .container-fluid.text-center {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-}
-        @media (max-width: 767px) {
-    /* Center the footer content vertically and horizontally */
-    footer .container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    /* Center the "Contact Information" section in the footer */
-    footer .container h4 {
-        text-align: center;
-    }
-
-    /* Center the "Phone:" and "Email:" text */
-    .text-center {
-        text-align: center;
-    }
-
-    /* Center the text in the Follow Us section */
-    footer .follow-us {
-        text-align: center;
-    }
-
-    /* Center social media icons */
-    footer .social-media {
-        display: flex;
-        justify-content: center;
-    }
-}
-
-        /* Align Follow Us to right in footer */
-        .follow-us {
-    text-align: right;
-}
-
-/* Align social media links to right */
-.social-media {
-    margin-left: auto;
-}
-
-/* Footer padding */
-footer {
-    padding-top: 20px;
-    padding-bottom: 20px;
-}
     </style>
 </head>
 <body>
@@ -170,7 +61,7 @@ footer {
                 </button>
                 <!-- Logo -->
                 <a class="navbar-brand" href="#">
-                    <img src="Landing Page Images/LOGO2.png" alt="Your Logo" class="logo">
+                    <img src="Landing Page Images/LOGOFINAL.png" alt="Your Logo" class="logo">
                 </a>
                 <!-- Navigation links -->
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -262,41 +153,6 @@ footer {
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script>
-        $(document).ready(function() {
-            // Function to center the logo on smaller screens
-            function centerLogoOnSmallScreens() {
-                if ($(window).width() <= 991.98) { // Check if screen width is less than or equal to 991.98 pixels
-                    $('.navbar-brand').addClass('text-center'); // Add Bootstrap utility class to center the text
-                } else {
-                    $('.navbar-brand').removeClass('text-center'); // Remove Bootstrap utility class
-                }
-            }
-
-            // Function to adjust logo size
-            function adjustLogoSize() {
-                var windowWidth = $(window).width();
-                var logo = $('.logo');
-
-                if (windowWidth < 992) {
-                    // Small screen size
-                    logo.css('width', '100px'); // Adjust width as needed
-                } else {
-                    // Larger screen size
-                    logo.css('width', '250px'); // Reset width
-                }
-            }
-
-            // Call the functions on page load
-            centerLogoOnSmallScreens();
-            adjustLogoSize();
-
-            // Call the functions whenever the window is resized
-            $(window).resize(function() {
-                centerLogoOnSmallScreens();
-                adjustLogoSize();
-            });
-        });
-    </script>
+    <script src="LogoResizing.js"></script>
 </body>
 </html>

@@ -9,66 +9,13 @@
     <!-- Font Awesome icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap">
-    <link rel="icon" type="image/png" href="Landing Page Images/favicon.png">
+    <link rel="icon" type="image/png" href="Landing Page Images/FaviconFinal.png">
+    <link rel="stylesheet" href="headerfooter.css">
     <style>
         body {
     font-family: 'Montserrat', sans-serif;
     font-weight: normal; /* Regular weight */
 }
-        /* Custom CSS for header and footer gradient background */
-        header, footer {
-            background: linear-gradient(to right, #ffffff, #f8fdff); /* Gradient background light blue */
-            color: #000000; /* Text color */
-            padding: 20px;
-        }
-
-/* Navigation menu customizations */
-.navbar-brand {
-    color: rgba(255, 255, 255, 0); /* Transparent white for logo */
-}
-
-.navbar-nav .nav-link {
-    color: rgba(255, 255, 255, 0.8); /* Transparent white for navigation items */
-}
-
-.navbar-nav .nav-link:hover {
-    color: #fff; /* White color on hover */
-}
-/* Desktop and Tablet Font Size */
-@media (min-width: 768px) {
-    .navbar-nav .nav-link {
-        font-size: 24px; /* Adjust font size for desktop and tablet */
-    }
-}
-
-@media (max-width: 991.98px) {
-    .navbar-collapse {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(255, 255, 255, 0.9); /* Adjust transparency as needed */
-        z-index: 1000; /* Ensure the menu appears above other content */
-        display: none; /* Initially hide the menu */
-    }
-    .navbar-collapse.show {
-        display: block; /* Show the menu when toggled */
-    }
-}
-@media (max-width: 991.98px) {
-    .navbar-nav .nav-link {
-        font-size: 24px; /* Adjust the font size as needed */
-        display: flex;
-        align-items: center; /* Center vertically */
-        justify-content: center; /* Center horizontally */
-    }
-
-    .navbar-nav .nav-link:hover {
-        color: #fff; /* White color on hover */
-    }
-}
-
 /* Custom CSS for carousel section */
 #carouselExampleControls {
     display: flex;
@@ -193,65 +140,106 @@
 }
 
         /* Custom CSS for contact form section */
-        .contact-form {
-            padding: 50px 0;
-        }
-    /* Align the text to the left on larger screens, this is CSS for footer section */
-@media (min-width: 768px) {
-    .text-center {
-        display: flex;
-        justify-content: flex-start;
-    }
-    .container-fluid.text-center {
+.contact-form {
+    padding: 50px 0;
+    background-color: #f8f9fa; /* Background color */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); /* Add shadow for 3D effect */
+    border-radius: 10px; /* Add border radius for rounded corners */
+}
+
+.contact-form h2 {
+    text-align: center; /* Center the heading */
+    font-family: 'Montserrat', sans-serif; /* Use Montserrat font */
+    font-size: 32px; /* Adjust font size for heading */
+    color: #333; /* Text color */
+}
+
+.contact-form form {
+    margin-top: 20px; /* Add margin top for spacing */
+}
+
+.contact-form form .form-group {
+    margin-bottom: 20px; /* Add margin bottom for spacing between form elements */
+}
+
+.contact-form form label {
+    color: #333; /* Label text color */
+}
+
+.contact-form form input[type="text"],
+.contact-form form input[type="email"],
+.contact-form form textarea,
+.contact-form form select {
+    width: 100%; /* Full width input fields */
+    padding: 10px; /* Add padding for input fields */
+    border-radius: 5px; /* Add border radius for rounded corners */
+    border: 1px solid #ccc; /* Add border */
+}
+
+.contact-form form textarea {
+    height: 150px; /* Set height for textarea */
+}
+
+.contact-form form select {
+    padding: 10px; /* Add padding for select element */
+}
+
+.contact-form form button[type="submit"] {
+    padding: 10px 20px; /* Add padding for button */
+    border: none; /* Remove border */
+    background-color: #007bff; /* Button background color */
+    color: #fff; /* Button text color */
+    border-radius: 5px; /* Add border radius for rounded corners */
+    cursor: pointer; /* Add cursor pointer on hover */
+    transition: background-color 0.3s ease; /* Add smooth transition */
+    display: inline-block; /* Set display to inline-block */
+}
+
+.contact-form form button[type="submit"]:hover {
+    background-color: #0056b3; /* Button background color on hover */
+}
+
+.thank-you-container {
+    display: none; /* Initially hidden */
+    position: absolute;
+    bottom: 20px; /* Adjust as needed to position it above the contact form */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #f8f9fa;
+    padding: 50px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); /* Add shadow for 3D effect */
+    border-radius: 10px; /* Add border radius for rounded corners */
+    z-index: 1000; /* Ensure it overlays other content */
+}
+
+.thank-you-container.show {
+    display: block; /* Show the container when necessary */
+}
+
+.thank-you-container .container {
     display: flex;
     justify-content: center;
     align-items: center;
 }
-}
-        @media (max-width: 767px) {
-    /* Center the footer content vertically and horizontally */
-    footer .container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
 
-    /* Center the "Contact Information" section in the footer */
-    footer .container h4 {
-        text-align: center;
-    }
-
-    /* Center the "Phone:" and "Email:" text */
-    .text-center {
-        text-align: center;
-    }
-
-    /* Center the text in the Follow Us section */
-    footer .follow-us {
-        text-align: center;
-    }
-
-    /* Center social media icons */
-    footer .social-media {
-        display: flex;
-        justify-content: center;
-    }
+.thank-you-container .centered-container {
+    text-align: center;
 }
 
-        /* Align Follow Us to right in footer */
-        .follow-us {
-    text-align: right;
+.thank-you-container h2,
+.thank-you-container p {
+    font-family: 'Montserrat', sans-serif; /* Use Montserrat font */
 }
 
-/* Align social media links to right */
-.social-media {
-    margin-left: auto;
+.thank-you-container h2 {
+    font-size: 32px; /* Adjust font size for heading */
+    margin-bottom: 20px; /* Add margin bottom for spacing */
+    color: #333; /* Text color */
 }
 
-/* Footer padding */
-footer {
-    padding-top: 20px;
-    padding-bottom: 20px;
+.thank-you-container p {
+    font-size: 18px; /* Adjust font size for paragraph */
+    color: #555; /* Text color */
 }
 
     </style>
@@ -268,7 +256,7 @@ footer {
                 </button>
                 <!-- Logo -->
                 <a class="navbar-brand" href="#">
-                    <img src="Landing Page Images/LOGO2.png" alt="Your Logo" class="logo">
+                    <img src="Landing Page Images/LOGOFINAL.png" alt="Your Logo" class="logo" loading="lazy">
                 </a>
                 <!-- Navigation links -->
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -286,17 +274,23 @@ footer {
                             <a class="nav-link" href="FAQ.html">FAQ</a>
                         </li>
                     </ul>
+                    <!-- Button to close the overlay menu -->
+                    <button class="btn btn-secondary close-menu" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Close navigation menu">
+                        <span class="close-icon">&times;</span>
+                    </button>
+        </div>
+    </div>
+</nav>
                 </div>
             </div>
         </nav>
     </header>
     
-
 <!-- Carousel section -->
 <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
     <div class="carousel-inner">
         <div class="carousel-item active">
-            <img src="Landing Page Images/HeroImage1.png" class="d-block" alt="...">
+            <img src="Landing Page Images/HeroImage1.png" class="d-block" alt="..." loading="lazy">
         </div>
         <!-- Add more carousel items here -->
     </div>
@@ -332,7 +326,7 @@ footer {
               </svg>
             </div>
             <div>
-              <h3 class="fs-2 text-body-emphasis">HVAC</h3>
+              <h3 class="fs-2 text-body-emphasis"> HVAC </h3>
               <p>Heating, Ventilation, and Air Conditioning specialist; fully licensed and capable of any job needed.</p>
               
             </div>
@@ -344,7 +338,7 @@ footer {
               </svg>
             </div>
             <div>
-              <h3 class="fs-2 text-body-emphasis">Residential Repairs</h3>
+              <h3 class="fs-2 text-body-emphasis"> Residential Repairs </h3>
               <p>As well as basic installations such as tv mounting, general home maintenance, and more.</p>
               
             </div>
@@ -357,7 +351,7 @@ footer {
               </svg>
             </div>
             <div>
-              <h3 class="fs-2 text-body-emphasis">Plumbing</h3>
+              <h3 class="fs-2 text-body-emphasis"> Plumbing </h3>
               <p>Installation of toilets, pipe installation, and basic plumbing.</p>
               
             </div>
@@ -470,8 +464,14 @@ footer {
             </div>
             <p id="my-form-status"></p>
         </form>
-    </div>
-</section>
+    </section>
+
+    <section id="thank-you-container" class="hidden">
+        <div class="thank-you-container">
+            <h2>Thank You!</h2>
+            <p>Thanks for your submission!</p>
+        </div>
+    </section>
 
 <footer>
     <!-- Contact information -->
@@ -507,37 +507,54 @@ footer {
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="LogoResizing.js"></script>
 <script>
-    var form = document.getElementById("my-form");
-    
-    async function handleSubmit(event) {
-      event.preventDefault();
-      var status = document.getElementById("my-form-status");
-      var data = new FormData(event.target);
-      fetch(event.target.action, {
+async function handleSubmit(event) {
+    event.preventDefault();
+    var status = document.getElementById("my-form-status");
+    var data = new FormData(event.target);
+    fetch(event.target.action, {
         method: form.method,
         body: data,
         headers: {
             'Accept': 'application/json'
         }
-      }).then(response => {
+    }).then(response => {
         if (response.ok) {
-          status.innerHTML = "Thanks for your submission!";
-          form.reset()
+            status.innerHTML = "Thanks for your submission!";
+            form.reset();
+            showThankYouContainer(); // Call function to show thank you container
+            setTimeout(function() {
+                hideThankYouContainer(); // Hide thank you container after 5 seconds
+                showContactForm(); // Show contact form again
+            }, 5000); // 5000 milliseconds = 5 seconds
         } else {
-          response.json().then(data => {
-            if (Object.hasOwn(data, 'errors')) {
-              status.innerHTML = data["errors"].map(error => error["message"]).join(", ")
-            } else {
-              status.innerHTML = "Oops! There was a problem submitting your form"
-            }
-          })
+            response.json().then(data => {
+                if (Object.hasOwn(data, 'errors')) {
+                    status.innerHTML = data["errors"].map(error => error["message"]).join(", ");
+                } else {
+                    status.innerHTML = "Oops! There was a problem submitting your form";
+                }
+            });
         }
-      }).catch(error => {
-        status.innerHTML = "Oops! There was a problem submitting your form"
-      });
-    }
-    form.addEventListener("submit", handleSubmit)
+    }).catch(error => {
+        status.innerHTML = "Oops! There was a problem submitting your form";
+    });
+}
+
+function showThankYouContainer() {
+    thankYouContainer.classList.add('show'); // Use classList to add 'show' class
+}
+
+function hideThankYouContainer() {
+    thankYouContainer.classList.remove('show'); // Use classList to remove 'show' class
+}
+
+function showContactForm() {
+    form.style.display = "block";
+}
+
 </script>
 
                  <script>
@@ -547,45 +564,6 @@ footer {
                       $(element).toggleClass('clicked');
                   }
                   </script>
-            
-            <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-            <script>
-                $(document).ready(function() {
-                    // Function to center the logo on smaller screens
-                    function centerLogoOnSmallScreens() {
-                        if ($(window).width() <= 991.98) { // Check if screen width is less than or equal to 991.98 pixels
-                            $('.navbar-brand').addClass('text-center'); // Add Bootstrap utility class to center the text
-                        } else {
-                            $('.navbar-brand').removeClass('text-center'); // Remove Bootstrap utility class
-                        }
-                    }
-            
-                    // Function to adjust logo size
-                    function adjustLogoSize() {
-                        var windowWidth = $(window).width();
-                        var logo = $('.logo');
-            
-                        if (windowWidth < 992) {
-                            // Small screen size
-                            logo.css('width', '100px'); // Adjust width as needed
-                        } else {
-                            // Larger screen size
-                            logo.css('width', '250px'); // Reset width
-                        }
-                    }
-            
-                    // Call the functions on page load
-                    centerLogoOnSmallScreens();
-                    adjustLogoSize();
-            
-                    // Call the functions whenever the window is resized
-                    $(window).resize(function() {
-                        centerLogoOnSmallScreens();
-                        adjustLogoSize();
-                    });
-                });
-            </script>
-            
-                  
+                 
 </body>
 </html>
