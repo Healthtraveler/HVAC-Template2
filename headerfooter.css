@@ -1,31 +1,56 @@
 /* Custom CSS for header and footer gradient background */
-        header, footer {
-            background: linear-gradient(to right, #ffffff, #f8fdff); /* Gradient background light blue */
-            color: #000000; /* Text color */
-            padding: 20px;
-        }
+header, footer {
+    background: linear-gradient(to right, #ffffff, #f0f8ff); /* Lighter gradient background resembling the sky */
+    color: #000000; /* Text color */
+    padding: 20px;
+    font-family: 'Montserrat', sans-serif; /* Use Montserrat font */
+}
 
 /* Navigation menu customizations */
 .navbar-brand {
     color: rgba(255, 255, 255, 0); /* Transparent white for logo */
+    text-align: center; /* Center the logo */
+    font-family: 'Montserrat', sans-serif; /* Use Montserrat font */
 }
 
 .navbar-nav .nav-link {
     color: rgba(255, 255, 255, 0.8); /* Transparent white for navigation items */
+    font-size: 24px; /* Default font size for navigation items */
+    font-family: 'Montserrat', sans-serif; /* Use Montserrat font */
 }
 
 .navbar-nav .nav-link:hover {
-    color: #fff; /* White color on hover */
+    color: #fff8e1; /* color on hover */
 }
-/* Desktop and Tablet Font Size */
-@media (min-width: 768px) {
+
+/* Desktop Font Size */
+@media (min-width: 992px) {
     .navbar-nav .nav-link {
-        font-size: 24px; /* Adjust font size for desktop and tablet */
+        font-size: 24px; /* Adjust font size for desktop */
+    }
+    .navbar-brand {
+        text-align: center; /* Center the logo on desktop */
     }
 }
 
+/* Tablet Font Size */
+@media (max-width: 991.98px) and (min-width: 768px) {
+    .navbar-nav .nav-link {
+        font-size: 20px; /* Adjust font size for tablet */
+    }
+}
+
+/* Mobile Font Size */
+@media (max-width: 767.98px) {
+    .navbar-nav .nav-link {
+        font-size: 36px; /* Adjust font size for mobile */
+    }
+}
+
+/* Hamburger Menu Positioning */
 @media (max-width: 991.98px) {
     .navbar-collapse {
+        display: none; /* Hide the menu by default */
         position: fixed;
         top: 0;
         left: 0;
@@ -33,47 +58,296 @@
         height: 100%;
         background-color: rgba(255, 255, 255, 0.9); /* Adjust transparency as needed */
         z-index: 1000; /* Ensure the menu appears above other content */
-        display: flex;
-        align-items: center; /* Center vertically */
-        justify-content: center; /* Center horizontally */
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center horizontally */
+        justify-content: center; /* Center vertically */
         text-align: center; /* Align text center */
     }
     .navbar-collapse.show {
-        display: block; /* Show the menu when toggled */
+        display: flex; /* Show the menu when toggled */
     }
-    .close-menu {
-        position: absolute;
-        top: 20px;
-        left: 20px;
-        background: none;
-        border: none;
-        color: #000;
-    }
-    .close-icon {
-        font-size: 36px;
+    .navbar-toggler {
+        order: -1; /* Move the hamburger menu to the beginning */
     }
 }
 
-@media (min-width: 992px) {
-    .close-menu {
+/* Exit Button */
+.exit-btn {
+    display: none; /* Hide exit button by default */
+}
+
+/* Show exit button when the menu is open */
+.navbar-collapse.show .exit-btn {
+    display: block;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background: none;
+    border: none;
+    color: #000000;
+    font-size: 24px;
+    z-index: 1100; /* Ensure the exit button appears above other elements */
+}
+
+/* Hide the "Call Us" and "Book Now" buttons on smaller screens */
+@media (max-width: 768px) {
+    .navBook {
         display: none;
     }
 }
 
-@media (max-width: 991.98px) {
-    .navbar-nav .nav-link {
-        font-size: 24px; /* Adjust the font size as needed */
-        display: flex;
-        align-items: center; /* Center vertically */
-        justify-content: center; /* Center horizontally */
+/* Show the "Call Us" and "Book Now" buttons on the overlay when the menu is open */
+.navbar-collapse.show .navBook {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 20px; /* Adjust the distance from the bottom as needed */
+    left: 50%;
+    transform: translateX(-50%);
+    width: auto; /* Adjust width as needed */
+}
+
+.heroOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Info {
+    color: white; /* Color for the text */
+    font-family: 'Montserrat', sans-serif; /* Use Montserrat font */
+}
+
+/* Custom CSS for feature section */
+.feature-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.feature-icon {
+    margin: 0 20px;
+    text-align: center;
+}
+
+.feature-icon img {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 20px;
+}
+  
+/* Custom CSS for services section */
+.service {
+    background-color: #ffffff; /* White background for service container */
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Shadow effect */
+    transition: transform 0.3s ease; /* Smooth transition */
+    cursor: pointer; /* Cursor pointer for interaction */
+    font-family: 'Montserrat', sans-serif; /* Use Montserrat font */
+}
+
+.centered-container {
+    text-align: center; /* Center text horizontally */
+    height: 100%; /* Ensure full height */
+}
+
+.centered-container h2 {
+    display: inline-block; /* Ensure text is centered */
+}
+
+.service h3 {
+    margin-top: 0;
+}
+
+.service .description {
+    display: none; /* Hide description initially */
+}
+
+.service.clicked .name {
+    display: none; /* Hide name when service is clicked */
+}
+
+.service.clicked .description {
+    display: block; /* Show description when service is clicked */
+}
+
+      /* Custom CSS for contact form section */
+      .contact-form {
+        padding: 50px 0;
+        background-color: #f8f9fa; /* Background color */
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); /* Add shadow for 3D effect */
+        border-radius: 10px; /* Add border radius for rounded corners */
+    }
+    
+    .contact-form h2 {
+        text-align: center; /* Center the heading */
+        font-family: 'Montserrat', sans-serif; /* Use Montserrat font */
+        font-size: 32px; /* Adjust font size for heading */
+        color: #333; /* Text color */
+    }
+    
+    .contact-form form {
+        margin-top: 20px; /* Add margin top for spacing */
+    }
+    
+    .contact-form form .form-group {
+        margin-bottom: 20px; /* Add margin bottom for spacing between form elements */
+    }
+    
+    .contact-form form label {
+        color: #333; /* Label text color */
+    }
+    
+    .contact-form form input[type="text"],
+    .contact-form form input[type="email"],
+    .contact-form form textarea,
+    .contact-form form select {
+        width: 100%; /* Full width input fields */
+        padding: 10px; /* Add padding for input fields */
+        border-radius: 5px; /* Add border radius for rounded corners */
+        border: 1px solid #ccc; /* Add border */
+    }
+    
+    .contact-form form textarea {
+        height: 150px; /* Set height for textarea */
+    }
+    
+    .contact-form form select {
+        padding: 10px; /* Add padding for select element */
     }
 
-    .navbar-nav .nav-link:hover {
-        color: #fff; /* White color on hover */
-    }
+.contact-form form button[type="submit"] {
+    padding: 10px 20px; /* Add padding for button */
+    border: none; /* Remove border */
+    background-color: #0088ff; /* Button background color */
+    color: #ffffff; /* Button text color */
+    border-radius: 5px; /* Add border radius for rounded corners */
+    cursor: pointer; /* Add cursor pointer on hover */
+    transition: background-color 0.3s ease; /* Add smooth transition */
+    display: inline-block; /* Set display to inline-block */
 }
-       /* Align the text to the left on larger screens, this is CSS for footer section */
-@media (min-width: 768px) {
+
+.contact-form form button[type="submit"]:hover {
+    background-color: #9fd2ff; /* Button background color on hover */
+}
+
+.thank-you-container {
+    display: none; /* Initially hidden */
+    position: absolute;
+    bottom: 20px; /* Adjust as needed to position it above the contact form */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #f8f9fa;
+    padding: 50px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); /* Add shadow for 3D effect */
+    border-radius: 10px; /* Add border radius for rounded corners */
+    z-index: 1000; /* Ensure it overlays other content */
+}
+
+.thank-you-container.show {
+    display: block; /* Show the container when necessary */
+}
+
+.thank-you-container .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.thank-you-container .centered-container {
+    text-align: center;
+}
+
+.thank-you-container h2,
+.thank-you-container p {
+    font-family: 'Montserrat', sans-serif; /* Use Montserrat font */
+}
+
+.thank-you-container h2 {
+    font-size: 32px; /* Adjust font size for heading */
+    margin-bottom: 20px; /* Add margin bottom for spacing */
+    color: #333; /* Text color */
+}
+
+.thank-you-container p {
+    font-size: 18px; /* Adjust font size for paragraph */
+    color: #555; /* Text color */
+}
+
+/* Availability */
+
+/* Center text and set color for PricingHeader and Sentence */
+#cities .PricingHeader,
+#hours .PricingHeader,
+#cities .Sentence,
+#hours .Sentence {
+    text-align: center;
+    color: rgb(0, 0, 0);
+}
+
+/* Center text inside cards */
+#cities .card-header h4,
+#hours .card-header h4,
+#cities .card-header small,
+#hours .card-header small,
+#cities .card-body h6,
+#hours .card-body h6,
+#cities .card-body p,
+#hours .card-body p {
+    text-align: center;
+}
+
+/* Set button styles */
+#cities .btn1,
+#hours .btn1 {
+    border-color: #000000;
+    color: #000000;
+} 
+
+/* Set hover styles for buttons */
+#cities .btn1:hover,
+#hours .btn1:hover {
+    background-color: #f0f8ff;
+    border-color: #f0f8ff;
+}
+
+/* Set border and background color for cards and card headers */
+#cities .card,
+#hours .card,
+#cities .card-header,
+#hours .card-header {
+    border-color: #000000;
+}
+
+#cities .card-header,
+#hours .card-header {
+    background-color: #f0f8ff;
+}
+
+/* Add some spacing between stacked cards */
+#cities .card,
+#hours .card {
+    margin-bottom: 20px;
+}
+
+/* Ensure cards are stacked vertically */
+#cities .col-12,
+#hours .col-12 {
+    width: 100%;
+}
+
+  /* Align the text to the left on larger screens, this is CSS for footer section */
+  @media (min-width: 768px) {
     .text-center {
         display: flex;
         justify-content: flex-start;

@@ -10,309 +10,80 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap">
     <link rel="icon" type="image/png" href="Landing Page Images/FaviconFinal.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="headerfooter.css">
     <style>
         body {
     font-family: 'Montserrat', sans-serif;
     font-weight: normal; /* Regular weight */
-}
-/* Custom CSS for carousel section */
-#carouselExampleControls {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-}
-
-.carousel-item img {
-    flex-shrink: 0;
-    width: 100%;
-    height: auto;
-}
-
-/* CSS for semi transparent container overlay */
-.carousel-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
-}
-
-/* CSS for text and button within the container */
-.carousel-overlay .container-overlay {
-    color: #fff; /* White text color */
-    z-index: 1; /* Ensure the text is above the carousel */
-}
-
-.carousel-overlay h2 {
-    font-size: 36px;
-    margin-bottom: 20px;
-}
-/* Center the "Contact Now" button */
-.carousel-overlay .btn {
-    display: block; /* Display as block */
-    margin: 0 auto; /* Center the button horizontally */
-    text-align: center; /* Center the text within the button */
-    width: -moz-fit-content; /* Firefox support */
-    width: fit-content; /* Set width to fit the content */
-    padding: 10px 20px; /* Adjust padding to make the button smaller */
-    font-size: 18px; /* Set font size */
-}
-
-/* Font Size for Screens Smaller Than 767px */
-@media (max-width: 767px) {
-    .carousel-overlay h2 {
-        font-size: 20px; /* Adjust font size for smaller screens */
-        margin-bottom: 10px; /* Adjust margin bottom for smaller screens */
-    }
-}
-
-.carousel-overlay button {
-    font-size: 18px;
-}
-
-        /* Custom CSS for feature section */
-        .feature-icons {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin-top: 50px;
         }
-
-        .feature-icon {
-            margin: 0 20px;
-            text-align: center;
-        }
-
-        .feature-icon img {
-            width: 100px;
-            height: 100px;
-            margin-bottom: 20px;
-        }
-        
-        /* Center h3 elements for smaller screens */
-@media (max-width: 768px) {
-  .icon-square h3 {
-    text-align: center;
-  }
-}
-
-        /* Custom CSS for services section */
-        .service {
-    background-color: #ffffff; /* White background for service container */
-    padding: 20px;
-    margin-bottom: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Shadow effect */
-    transition: transform 0.3s ease; /* Smooth transition */
-    cursor: pointer; /* Cursor pointer for interaction */
-}
-
-.centered-container {
-    text-align: center; /* Center text horizontally */
-    height: 100%; /* Ensure full height */
-}
-
-.centered-container h2 {
-    display: inline-block; /* Ensure text is centered */
-}
-
-.service h3 {
-    margin-top: 0;
-}
-
-.service .description {
-    display: none; /* Hide description initially */
-}
-
-.service.clicked .name {
-    display: none; /* Hide name when service is clicked */
-}
-
-.service.clicked .description {
-    display: block; /* Show description when service is clicked */
-}
-
-        /* Custom CSS for contact form section */
-.contact-form {
-    padding: 50px 0;
-    background-color: #f8f9fa; /* Background color */
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); /* Add shadow for 3D effect */
-    border-radius: 10px; /* Add border radius for rounded corners */
-}
-
-.contact-form h2 {
-    text-align: center; /* Center the heading */
-    font-family: 'Montserrat', sans-serif; /* Use Montserrat font */
-    font-size: 32px; /* Adjust font size for heading */
-    color: #333; /* Text color */
-}
-
-.contact-form form {
-    margin-top: 20px; /* Add margin top for spacing */
-}
-
-.contact-form form .form-group {
-    margin-bottom: 20px; /* Add margin bottom for spacing between form elements */
-}
-
-.contact-form form label {
-    color: #333; /* Label text color */
-}
-
-.contact-form form input[type="text"],
-.contact-form form input[type="email"],
-.contact-form form textarea,
-.contact-form form select {
-    width: 100%; /* Full width input fields */
-    padding: 10px; /* Add padding for input fields */
-    border-radius: 5px; /* Add border radius for rounded corners */
-    border: 1px solid #ccc; /* Add border */
-}
-
-.contact-form form textarea {
-    height: 150px; /* Set height for textarea */
-}
-
-.contact-form form select {
-    padding: 10px; /* Add padding for select element */
-}
-
-.contact-form form button[type="submit"] {
-    padding: 10px 20px; /* Add padding for button */
-    border: none; /* Remove border */
-    background-color: #007bff; /* Button background color */
-    color: #fff; /* Button text color */
-    border-radius: 5px; /* Add border radius for rounded corners */
-    cursor: pointer; /* Add cursor pointer on hover */
-    transition: background-color 0.3s ease; /* Add smooth transition */
-    display: inline-block; /* Set display to inline-block */
-}
-
-.contact-form form button[type="submit"]:hover {
-    background-color: #0056b3; /* Button background color on hover */
-}
-
-.thank-you-container {
-    display: none; /* Initially hidden */
-    position: absolute;
-    bottom: 20px; /* Adjust as needed to position it above the contact form */
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: #f8f9fa;
-    padding: 50px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); /* Add shadow for 3D effect */
-    border-radius: 10px; /* Add border radius for rounded corners */
-    z-index: 1000; /* Ensure it overlays other content */
-}
-
-.thank-you-container.show {
-    display: block; /* Show the container when necessary */
-}
-
-.thank-you-container .container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.thank-you-container .centered-container {
-    text-align: center;
-}
-
-.thank-you-container h2,
-.thank-you-container p {
-    font-family: 'Montserrat', sans-serif; /* Use Montserrat font */
-}
-
-.thank-you-container h2 {
-    font-size: 32px; /* Adjust font size for heading */
-    margin-bottom: 20px; /* Add margin bottom for spacing */
-    color: #333; /* Text color */
-}
-
-.thank-you-container p {
-    font-size: 18px; /* Adjust font size for paragraph */
-    color: #555; /* Text color */
-}
 
     </style>
 </head>
 <body>
 
     <header>
-        <!-- Navigation menu and logo -->
-        <nav class="navbar navbar-expand-lg navbar-light bg-transparent">
-            <div class="container">
-                <!-- Toggle button for small screens -->
-                <button class="navbar-toggler order-lg-0" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <!-- Logo -->
-                <a class="navbar-brand" href="index.html">
-                    <img src="Landing Page Images/LOGOFINAL.png" alt="Your Logo" class="logo" loading="lazy">
-                </a>
-                <!-- Navigation links -->
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav ml-auto">
-                        <li class="nav-item active">
-                            <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="Gallery.html">Gallery</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="Services.html">Services</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="FAQ.html">FAQ</a>
-                        </li>
-                    </ul>
-                    <!-- Button to close the overlay menu -->
-                    <button class="btn btn-secondary close-menu" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Close navigation menu">
-                        <span class="close-icon">&times;</span>
-                    </button>
-        </div>
-    </div>
-</nav>
-                </div>
+        <section id="stickyNav">
+            <div class="stickyNav">
+                <nav class="navbar navbar-expand-lg">
+                    <div class="container-fluid">
+                        <a class="navbar-brand" href="index.html"><img src="Landing Page Images/LOGOFINAL.png" alt="a sample tool icon" height="100px"></a>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDarkDropdown" aria-controls="navbarNavDarkDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarNavDarkDropdown">
+                            <ul class="navbar-nav">
+                                <li class="nav-item">
+                                    <a class="btn MenuBtn" href="./index.html" role="button">Home</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="btn MenuBtn" href="./gallery.html" role="button">Gallery</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="btn MenuBtn" href="./FAQ.html" role="button">FAQs</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="navBook d-inlineflex align-items-center">
+                            <a href="index.html" style="text-decoration:none;">
+                                <button class="btn btn-bd-primary bookBtn">
+                                    Book Now
+                                </button>
+                            </a>
+                            <a href="tel: 2095344730" style="text-decoration:none;">
+                                <button type="button" class="btn btn-bd-primary bookBtn">
+                                    CALL US
+                                </button>
+                            </a>
+                        </div>
+                        <!-- Exit button -->
+                        <button class="exit-btn close-icon" aria-label="Close menu">✕</button>
+                    </div>
+                </nav>
             </div>
-        </nav>
+        </section>
+    
     </header>
     
 <!-- Carousel section -->
-<div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-    <div class="carousel-inner">
-        <div class="carousel-item active">
-            <img src="Landing Page Images/HeroImage1.png" class="d-block" alt="..." loading="lazy">
+
+    <div>
+        <div class="heroImage position-relative">
+            <img src="Landing Page Images/HeroImage1.png" class="w-100" alt="a stock image">
+            <div class="heroOverlay">
+                <div class="container d-flex flex-column justify-content-center align-items-center h-100">
+                    <h1 class="Info text-center fw-bold mb-3">Free Estimates</h1>
+                    <a href="tel: 2095344730" style="text-decoration:none;">
+                        <button type="button" class="bookBtn btn HeroBtn rounded-pill btn-dark btn-lg px-4 me-md-2"> 
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-tools SVG" viewBox="0 0 16 16">
+                                <path d="M1 0 0 1l2.2 3.081a1 1 0 0 0 .815.419h.07a1 1 0 0 1 .708.293l2.675 2.675-2.617 2.654A3.003 3.003 0 0 0 0 13a3 3 0 1 0 5.878-.851l2.654-2.617.968.968-.305.914a1 1 0 0 0 .242 1.023l3.27 3.27a.997.997 0 0 0 1.414 0l1.586-1.586a.997.997 0 0 0 0-1.414l-3.27-3.27a1 1 0 0 0-1.023-.242L10.5 9.5l-.96-.96 2.68-2.643A3.005 3.005 0 0 0 16 3q0-.405-.102-.777l-2.14 2.141L12 4l-.364-1.757L13.777.102a3 3 0 0 0-3.675 3.68L7.462 6.46 4.793 3.793a1 1 0 0 1-.293-.707v-.071a1 1 0 0 0-.419-.814zm9.646 10.646a.5.5 0 0 1 .708 0l2.914 2.915a.5.5 0 0 1-.707.707l-2.915-2.914a.5.5 0 0 1 0-.708M3 11l.471.242.529.026.287.445.445.287.026.529L5 13l-.242.471-.026.529-.445.287-.287.445-.529.026L3 15l-.471-.242L2 14.732l-.287-.445L1.268 14l-.026-.529L1 13l.242-.471.026-.529.445-.287.287-.445.529-.026z"/>
+                            </svg> Contact Now
+                        </button>
+                    </a>
+                </div>
+            </div>
         </div>
-        <!-- Add more carousel items here -->
-    </div>
-    <!-- Controls -->
-    <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="sr-only">Previous</span>
-    </a>
-    <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="sr-only">Next</span>
-    </a>
-    <!-- Transparent container with text and button -->
-    <div class="carousel-overlay">
-        <div class="container-overlay">
-            <h2>Free Estimates For Any Job</h2>
-            <a href="tel:2095344730" class="btn btn-primary">
-                <i class="fas fa-phone-alt"></i> Contact Now
-            </a>
-        </div>
-    </div>
-</div>
+
   <!-- Features -->
   <section id="features">
     <div class=" mx-0">
@@ -366,7 +137,9 @@
     <div class="container">
         <h2>Our Services</h2>
         <div class="service" onclick="toggleService(this)">
-            <div class="name">
+            <div class="name"><svg xmlns="http://www.w3.org/2000/svg" height="30" fill="currentColor" class="bi bi-fire" viewBox="0 0 16 16">
+                <path d="M8 16c3.314 0 6-2 6-5.5 0-1.5-.5-4-2.5-6 .25 1.5-1.25 2-1.25 2C11 4 9 .5 6 0c.357 2 .5 4-2 6-1.25 1-2 2.729-2 4.5C2 14 4.686 16 8 16m0-1c-1.657 0-3-1-3-2.75 0-.75.25-2 1.25-3C6.125 10 7 10.5 7 10.5c-.375-1.25.5-3.25 2-3.5-.179 1-.25 2 1 3 .625.5 1 1.364 1 2.25C11 14 9.657 15 8 15"/>
+              </svg>
                 <h3>Heating System Installation</h3>
             </div>
             <div class="description">
@@ -374,7 +147,10 @@
             </div>
         </div>
         <div class="service" onclick="toggleService(this)">
-            <div class="name">
+            <div class="name"><svg xmlns="http://www.w3.org/2000/svg" height="30" fill="currentColor" class="bi bi-fan" viewBox="0 0 16 16">
+                <path d="M10 3c0 1.313-.304 2.508-.8 3.4a2 2 0 0 0-1.484-.38c-.28-.982-.91-2.04-1.838-2.969a8 8 0 0 0-.491-.454A6 6 0 0 1 8 2c.691 0 1.355.117 1.973.332Q10 2.661 10 3m0 5q0 .11-.012.217c1.018-.019 2.2-.353 3.331-1.006a8 8 0 0 0 .57-.361 6 6 0 0 0-2.53-3.823 9 9 0 0 1-.145.64c-.34 1.269-.944 2.346-1.656 3.079.277.343.442.78.442 1.254m-.137.728a2 2 0 0 1-1.07 1.109c.525.87 1.405 1.725 2.535 2.377q.3.174.605.317a6 6 0 0 0 2.053-4.111q-.311.11-.641.199c-1.264.339-2.493.356-3.482.11ZM8 10c-.45 0-.866-.149-1.2-.4-.494.89-.796 2.082-.796 3.391q0 .346.027.678A6 6 0 0 0 8 14c.94 0 1.83-.216 2.623-.602a8 8 0 0 1-.497-.458c-.925-.926-1.555-1.981-1.836-2.96Q8.149 10 8 10M6 8q0-.12.014-.239c-1.02.017-2.205.351-3.34 1.007a8 8 0 0 0-.568.359 6 6 0 0 0 2.525 3.839 8 8 0 0 1 .148-.653c.34-1.267.94-2.342 1.65-3.075A2 2 0 0 1 6 8m-3.347-.632c1.267-.34 2.498-.355 3.488-.107.196-.494.583-.89 1.07-1.1-.524-.874-1.406-1.733-2.541-2.388a8 8 0 0 0-.594-.312 6 6 0 0 0-2.06 4.106q.309-.11.637-.199M8 9a1 1 0 1 0 0-2 1 1 0 0 0 0 2"/>
+                <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
+              </svg>
                 <h3>AC Repair and Maintenance</h3>
             </div>
             <div class="description">
@@ -382,7 +158,7 @@
             </div>
         </div>
         <div class="service" onclick="toggleService(this)">
-            <div class="name">
+            <div class="name"> <img src="Landing Page Images/Fan.svg" alt="a Fan svg" height="30">
                 <h3>Ventilation System Installation</h3>
             </div>
             <div class="description">
@@ -390,7 +166,7 @@
             </div>
         </div>
         <div class="service" onclick="toggleService(this)">
-            <div class="name">
+            <div class="name"> <img src="Landing Page Images/plumbing.svg" alt="a pipe svg" height="30">
                 <h3>Plumbing Services</h3>
             </div>
             <div class="description">
@@ -398,7 +174,10 @@
             </div>
         </div>
         <div class="service" onclick="toggleService(this)">
-            <div class="name">
+            <div class="name"><svg xmlns="http://www.w3.org/2000/svg" height="30" fill="currentColor" class="bi bi-clipboard-check-fill" viewBox="0 0 16 16">
+                <path d="M6.5 0A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0zm3 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5z"/>
+                <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1A2.5 2.5 0 0 1 9.5 5h-3A2.5 2.5 0 0 1 4 2.5zm6.854 7.354-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 0 1 .708-.708L7.5 10.793l2.646-2.647a.5.5 0 0 1 .708.708"/>
+              </svg>
                 <h3>Indoor Air Quality Assessment</h3>
             </div>
             <div class="description">
@@ -406,7 +185,7 @@
             </div>
         </div>
         <div class="service" onclick="toggleService(this)">
-            <div class="name">
+            <div class="name"><img src="Landing Page Images/24-7.svg" alt="24/7 service svg" height="30">
                 <h3>Emergency HVAC Repairs</h3>
             </div>
             <div class="description">
@@ -415,6 +194,66 @@
         </div>
     </div>
 </section>
+
+<!-- Availability section -->
+        
+        <section id="cities">
+            <div class="container my-5 pt-5">
+              <h2 class="PricingHeader display-4 fw-normal">Cities We Serve</h2>
+              <p class=" Sentence fs-5">Contact us if you need immediate service!</p>
+              <div class=" mb-3 text-center">
+                <div class="col-12">
+                  <div class="card mb-4 rounded-3">
+                    <div class="card-header py-3">
+                      <h4 class="my-0 fw-normal">Serving our community in these cities!</h4>
+                    </div>
+                    <div class="container centered-text"> <!-- Ensure text-center class here -->
+                        <div class="row mt-4">
+                            <div class="col-6">
+                                <h3>Modesto</h3>
+                            </div>
+                            <div class="col-6">
+                                <h3>Ripon</h3>
+                            </div>
+                            <div class="col-6">
+                                <h3>Turlock</h3>
+                            </div>
+                            <div class="col-6">
+                                <h3>Ceres</h3>
+                            </div>
+                            <div class="col-12">
+                                <h3>Manteca</h3>
+                            </div>
+                      </div>
+                    </div>
+                    <small class="fs-5 text-body-secondary fw-light mb-2">And Surrounding Cities!</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          
+          <section id="hours">
+            <div class="container my-5">
+              <h2 class="PricingHeader display-4 fw-normal">Operating Hours</h2>
+              <div class="card mb-4 rounded-3 shadow-sm">
+                <div class="card-header py-3">
+                  <h4 class="my-0 fw-normal">We Operate 24/7 by Phone!</h4>
+                </div>
+                <div class="container text-center">
+                  <div class="row my-2">
+                    <!-- Your operating hours content here -->
+                  </div>
+                </div>
+                <div class="d-grid gap-2 col-6 mx-auto">
+                  <a style="text-decoration:none;" href="tel:#">
+                    <button type="button" class=" btn1 rounded-pill w-100 btn btn-lg mb-2">CALL NOW</button>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </section>
+          
 
 <!-- Contact form section -->
 <section class="contact-form">
@@ -509,61 +348,10 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="LogoResizing.js"></script>
-<script>
-async function handleSubmit(event) {
-    event.preventDefault();
-    var status = document.getElementById("my-form-status");
-    var data = new FormData(event.target);
-    fetch(event.target.action, {
-        method: form.method,
-        body: data,
-        headers: {
-            'Accept': 'application/json'
-        }
-    }).then(response => {
-        if (response.ok) {
-            status.innerHTML = "Thanks for your submission!";
-            form.reset();
-            showThankYouContainer(); // Call function to show thank you container
-            setTimeout(function() {
-                hideThankYouContainer(); // Hide thank you container after 5 seconds
-                showContactForm(); // Show contact form again
-            }, 5000); // 5000 milliseconds = 5 seconds
-        } else {
-            response.json().then(data => {
-                if (Object.hasOwn(data, 'errors')) {
-                    status.innerHTML = data["errors"].map(error => error["message"]).join(", ");
-                } else {
-                    status.innerHTML = "Oops! There was a problem submitting your form";
-                }
-            });
-        }
-    }).catch(error => {
-        status.innerHTML = "Oops! There was a problem submitting your form";
-    });
-}
-
-function showThankYouContainer() {
-    thankYouContainer.classList.add('show'); // Use classList to add 'show' class
-}
-
-function hideThankYouContainer() {
-    thankYouContainer.classList.remove('show'); // Use classList to remove 'show' class
-}
-
-function showContactForm() {
-    form.style.display = "block";
-}
-
-</script>
-
-                 <script>
-
-                  // Function to toggle service description
-                  function toggleService(element) {
-                      $(element).toggleClass('clicked');
-                  }
-                  </script>
+<script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+<script src="myformsubmission.js"></script>
+<script src="servicedescriptiontoggle.js"></script>
+<script src="CloseMenu.js"></script>
                  
 </body>
 </html>
