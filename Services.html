@@ -9,6 +9,7 @@
     <!-- Font Awesome icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="headerfooter.css">
     <style>
         body {
@@ -19,38 +20,45 @@
 </head>
 <body>
 
-    <header>
-        <!-- Navigation menu and logo -->
-        <nav class="navbar navbar-expand-lg navbar-light bg-transparent">
-            <div class="container">
-                <!-- Toggle button for small screens -->
-                <button class="navbar-toggler order-lg-0" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <!-- Logo -->
-                <a class="navbar-brand" href="index.html">
-                    <img src="Landing Page Images/LOGOFINAL.png" alt="Your Logo" class="logo">
-                </a>
-                <!-- Navigation links -->
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav ml-auto">
-                        <li class="nav-item active">
-                            <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="Gallery.html">Gallery</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="Services.html">Services</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="FAQ.html">FAQ</a>
-                        </li>
-                    </ul>
+    <section id="stickyNav">
+        <div class="stickyNav">
+            <nav class="navbar navbar-expand-lg">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="index.html"><img src="Landing Page Images/LOGOFINAL.png" alt="a sample tool icon" height="100px"></a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDarkDropdown" aria-controls="navbarNavDarkDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNavDarkDropdown">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="btn MenuBtn" href="./index.html" role="button">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="btn MenuBtn" href="./gallery.html" role="button">Gallery</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="btn MenuBtn" href="./FAQ.html" role="button">FAQs</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="navBook d-inlineflex align-items-center">
+                        <a href="index.html" style="text-decoration:none;">
+                            <button class="btn btn-bd-primary bookBtn">
+                                Book Now
+                            </button>
+                        </a>
+                        <a href="tel: 2095344730" style="text-decoration:none;">
+                            <button type="button" class="btn btn-bd-primary bookBtn">
+                                CALL US
+                            </button>
+                        </a>
+                    </div>
+                    <!-- Exit button -->
+                    <button class="exit-btn close-icon" aria-label="Close menu">✕</button>
                 </div>
-            </div>
-        </nav>
-    </header>
+            </nav>
+        </div>
+    </section>
 
 <!-- Services section -->
 <section id="services" class="text-center py-5">
@@ -198,41 +206,9 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script>
-        $(document).ready(function() {
-            // Function to center the logo on smaller screens
-            function centerLogoOnSmallScreens() {
-                if ($(window).width() <= 991.98) { // Check if screen width is less than or equal to 991.98 pixels
-                    $('.navbar-brand').addClass('text-center'); // Add Bootstrap utility class to center the text
-                } else {
-                    $('.navbar-brand').removeClass('text-center'); // Remove Bootstrap utility class
-                }
-            }
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="LogoResizing.js"></script>
+    <script src="CloseMenu.js"></script>
     
-            // Function to adjust logo size
-            function adjustLogoSize() {
-                var windowWidth = $(window).width();
-                var logo = $('.logo');
-    
-                if (windowWidth < 992) {
-                    // Small screen size
-                    logo.css('width', '100px'); // Adjust width as needed
-                } else {
-                    // Larger screen size
-                    logo.css('width', '250px'); // Reset width
-                }
-            }
-    
-            // Call the functions on page load
-            centerLogoOnSmallScreens();
-            adjustLogoSize();
-    
-            // Call the functions whenever the window is resized
-            $(window).resize(function() {
-                centerLogoOnSmallScreens();
-                adjustLogoSize();
-            });
-        });
-    </script>
 </body>
 </html>
